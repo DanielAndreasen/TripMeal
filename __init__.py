@@ -1,12 +1,22 @@
 from flask import Flask, render_template, flash, jsonify, request, url_for, \
                   redirect, session, g
-from functools import wraps
 from dbconnect import connection
 from MySQLdb import escape_string
 from wtforms import Form, TextField, PasswordField, BooleanField, validators
 from passlib.hash import sha256_crypt
-
+from functools import wraps
 import gc
+
+
+class RegistrationForm(Form):
+    username = TextField('Username', [validators.Length(min=4, max=25)])
+    email = TextField('Email address', [validators.Length(min=5, max=50)])
+    password = PasswordField('Password', [validators.Required(),
+                                          validators.EqualTo('confirm', message='Passwords must match')])
+    confirm = PasswordField('Repeat password')
+    accept_tos = BooleanField('I accept the <a href="/tos/">Terms of Service</a> and the <a href="/privacy/">Privacy Notice</a>.',
+                              [validators.Required()])
+
 
 def login_required(f):
     @wraps(f)
@@ -16,16 +26,14 @@ def login_required(f):
         return f(*args, **kwargs)
     return decorated_function
 
-
+# Setup Flask
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'nuiv32orh8f34uifvnewivuh3924j3gp09'
 
+
 @app.route('/')
 def homepage():
-    # session['username'] = None
     return render_template('main.html')
-
-
 
 
 @app.route('/login/', methods=['GET', 'POST'])
@@ -57,24 +65,12 @@ def login_page():
 
 
 @app.route('/logout/')
-# @login_required
+@login_required
 def logout_page():
     if session['logged_in']:
         session['logged_in'] = False
         session['username'] = None
     return redirect(url_for('homepage'))
-
-
-
-class RegistrationForm(Form):
-    username = TextField('Username', [validators.Length(min=4, max=25)])
-    email = TextField('Email address', [validators.Length(min=5, max=50)])
-    password = PasswordField('Password', [validators.Required(),
-                                          validators.EqualTo('confirm', message='Passwords must match')])
-    confirm = PasswordField('Repeat password')
-    accept_tos = BooleanField('I accept the <a href="/tos/">Terms of Service</a> and the <a href="/privacy/">Privacy Notice</a>.',
-                              [validators.Required()])
-
 
 
 @app.route('/register/', methods=['GET', 'POST'])
@@ -105,15 +101,13 @@ def register_page():
                 session['username'] = username
                 return redirect(url_for('homepage'))
         return render_template('register.html', form=form)
-
     except Exception as e:
         return str(e)
 
 
-
 @app.route('/newrecipe/', methods=['GET', 'POST'])
+@login_required
 def newrecipe():
-    # flash('Uhh, give me a new recipe!')
     if request.method == 'POST':
         print request.form
     return render_template('newrecipe.html')
@@ -126,27 +120,20 @@ def addrecipe():
         location = escape_string(request.form['country'])
         ingredients = escape_string(','.join(request.form['ingredients'].split('\r\n')).strip(','))
         recipe = escape_string(request.form['recipe'])
-        # username = session['username']
-        print title
-        print location
-        print ingredients
-        print recipe
+        username = session['username']
         c, conn = connection()
 
-        c.execute('INSERT INTO recipes (title, location, ingredients, recipe) VALUES ("%s", "%s", "%s", "%s");' %
-                                       (title, location, ingredients, recipe))
+        c.execute('INSERT INTO recipes (title, location, ingredients, recipe, user) VALUES ("%s", "%s", "%s", "%s", "%s");' %
+                                       (title, location, ingredients, recipe, username))
         conn.commit()  # Save to the database
         flash("Thanks for your recipe :)")
         c.close()
         conn.close()
         gc.collect()  # Garbage collection
 
-        # return redirect(url_for('homepage'))
         return redirect(url_for('newrecipe'))
     else:
         return render_template('main.html')
-
-
 
 
 @app.route('/_background/')
@@ -158,10 +145,13 @@ def background():
         return str(e)
 
 
+@app.route('/recipes/')
+def list_recipes():
+    c, conn = connection()
+    _ = c.execute('SELECT rid, title FROM recipes;')
+    recipes = c.fetchall()
 
-
-
-
+    return render_template('recipes.html', recipes=recipes)
 
 
 
