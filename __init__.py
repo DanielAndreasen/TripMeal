@@ -222,7 +222,17 @@ def list_recipe():
                 conn.close()
                 gc.collect()
                 return render_template('recipe.html', recipe=recipe, fav=False)
-            return render_template('recipe.html', recipe=recipe)
+            else:
+                if session['logged_in']:
+                    c, conn = connection()
+                    _ = c.execute('SELECT favourites FROM users WHERE username = ("%s");' % session['username'])
+                    favs = c.fetchall()[0][0].split(',')[1:]
+                    c.close()
+                    conn.close()
+                    gc.collect()
+                    return render_template('recipe.html', recipe=recipe, fav=rid in favs)
+                else:
+                    return render_template('recipe.html', recipe=recipe, fav=False)
         else:
             return redirect(url_for('list_recipes'))
     except Exception as e:
