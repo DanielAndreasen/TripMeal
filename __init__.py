@@ -5,6 +5,7 @@ from MySQLdb import escape_string
 from wtforms import Form, TextField, PasswordField, BooleanField, validators
 from passlib.hash import sha256_crypt
 from functools import wraps
+import random
 import gc
 
 
@@ -25,6 +26,29 @@ def login_required(f):
             return redirect(url_for('login_page'))
         return f(*args, **kwargs)
     return decorated_function
+
+
+def get_recipes(rid):
+    """rid can be an integer or 'all'.
+    Return a dictionary with the rid and title"""
+    c, conn = connection()
+    if rid == 'all':
+        _ = c.execute('SELECT rid, title FROM recipes;')
+        d = c.fetchall()
+        rid_dict = {int(di[0]): di[1] for di in d}
+        c.close()
+        conn.close()
+        gc.collect()
+        return rid_dict
+    else:
+        _ = c.execute('SELECT rid, title FROM recipes WHERE rid = ("%s");' % rid)
+        d = c.fetchall()[0]
+        rid_dict = {int(d[0]): d[1]}
+        c.close()
+        conn.close()
+        gc.collect()
+        return rid_dict
+
 
 # Setup Flask
 app = Flask(__name__)
@@ -226,6 +250,39 @@ def favourites_page():
         return render_template('favourites.html', favourites=fav_dict)
     else:
         return render_template('favourites.html', favourites=False)
+
+
+@app.route('/menu/')
+def menu_page():
+    menu_dict = {}
+    n_favourites = 0
+    all_recipes = get_recipes('all')
+    rids = all_recipes.keys()
+    days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
+    if session['logged_in']:  # Include favourites
+        c, conn = connection()
+        _ = c.execute('SELECT favourites FROM users WHERE username = ("%s");' % session['username'])
+        favs = map(int, c.fetchall()[0][0].split(',')[1:])
+        c.close()
+        conn.close()
+        gc.collect
+        n_favourites = len(favs)
+        if n_favourites:
+            rid = random.choice(favs)
+            favs.pop(favs.index(rid))  # Don't use the same recipe twice per week
+            tmp = get_recipes(rid)
+            day = random.choice(days)
+            days.pop(days.index(day))
+            menu_dict[day] = [rid, tmp[rid]]
+
+    for _ in range(7-n_favourites+1):
+        day = random.choice(days)
+        days.pop(days.index(day))
+        rid = random.choice(rids)
+        tmp = get_recipes(rid)
+        menu_dict[day] = [rid, tmp[rid]]
+
+    return render_template('menu.html', menu=menu_dict)
 
 
 if __name__ == '__main__':
