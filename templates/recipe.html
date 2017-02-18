@@ -1,0 +1,30 @@
+{% extends "header.html" %}
+
+{% block body %}
+  <h3>{{recipe[1]}}, {{recipe[2]}}</h3>
+  {% if session.logged_in %}
+    {% if fav %}
+      <a href="/recipe?rid={{recipe[0]}}&fav=false"><span class="glyphicon glyphicon-heart"></span> Remove from favourites</a>
+    {% else %}
+      <a href="/recipe?rid={{recipe[0]}}&fav=true"><span class="glyphicon glyphicon-heart-empty"></span> Add to favourites</a>
+    {% endif %}
+  {% endif %}
+  <br>
+
+  <div class="col-lg-offset-1 col-lg-3">
+    <h4>Ingredients</h4>
+    <ul>
+      {% for ingredient in recipe[3].split(',') %}
+      <li>{{ingredient}}</li>
+      {% endfor %}
+    </ul>
+  </div>
+
+  <div class="col-lg-6">
+    <h4>Recipe</h4>
+    <p>{{recipe[4]}}</p>
+  </div>
+
+
+
+{% endblock %}
