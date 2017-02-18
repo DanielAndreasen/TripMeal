@@ -10,5 +10,8 @@
       <input class="form-control" type="password" placeholder="Password" name="password" value="{{request.form.password}}">
       <input class="btn btn-default" type="submit" value="Login">
     </form>
+    {% if error %}
+      <p class="error"><strong>Error:</strong> {{error}}</p>
+    {% endif %}
   </div>
 {% endblock %}

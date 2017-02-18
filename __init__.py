@@ -38,8 +38,8 @@ def homepage():
 
 @app.route('/login/', methods=['GET', 'POST'])
 def login_page():
-    error = ''
     try:
+        error = None
         c, conn = connection()
         if request.method == 'POST':
             data = c.execute('SELECT * FROM users WHERE username = ("%s");' %
@@ -50,19 +50,16 @@ def login_page():
                 session['username'] = request.form['username']
                 session['favourites'] = data[4]
                 flash('You are now logged in')
-                return redirect(url_for('homepage'))
+                return redirect(url_for('favourites_page'))
             else:
                 error = 'Invalid credentials, try again'
         gc.collect()
         return render_template('login.html', error=error)
-
-    except Exception as e:
-        print e
+    except:
         error = 'Invalid credentials, try again'
         return render_template('login.html', error=error)
 
 
-# TODO: Some problems when login in with wrong username/password
 @app.route('/logout/')
 @login_required
 def logout_page():
