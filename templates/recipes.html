@@ -5,7 +5,7 @@
   <h3>All recipes</h3>
   <ul>
     {% for recipe in recipes %}
-      <li><a href="#" value="{{recipe[0]}}">{{recipe[1]}}</a></li>
+      <li><a href="/recipe?rid={{recipe[0]}}">{{recipe[1]}}</a></li>
     {% endfor %}
   </ul>
 
