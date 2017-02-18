@@ -62,6 +62,7 @@ def login_page():
         return render_template('login.html', error=error)
 
 
+# TODO: Some problems when login in with wrong username/password
 @app.route('/logout/')
 @login_required
 def logout_page():
@@ -205,6 +206,29 @@ def list_recipe():
             return redirect(url_for('list_recipes'))
     except Exception as e:
         return redirect(url_for('list_recipes'))
+
+
+@app.route('/favourites/')
+@login_required
+def favourites_page():
+    c, conn = connection()
+    _ = c.execute('SELECT favourites FROM users WHERE username = ("%s");' % session['username'])
+    favs = c.fetchall()[0][0].split(',')
+    c.close()
+    conn.close()
+    gc.collect()
+    if len(favs) > 1:
+        fav_dict = {}
+        for fav in favs[1:]:
+            c, conn = connection()
+            _ = c.execute('SELECT title FROM recipes WHERE rid = ("%s");' % fav)
+            fav_dict[fav] = c.fetchall()[0][0]
+            c.close()
+            conn.close()
+            gc.collect()
+        return render_template('favourites.html', favourites=fav_dict)
+    else:
+        return render_template('favourites.html', favourites=False)
 
 
 if __name__ == '__main__':
