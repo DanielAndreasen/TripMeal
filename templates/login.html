@@ -1,0 +1,14 @@
+{% extends "header.html" %}
+
+{% block body %}
+  <div class="container">
+    <br>
+    <h4>Please login:</h4>
+    <br>
+    <form class="form-inline" action="" method="post">
+      <input class="form-control" type="text" placeholder="Username" name="username" value="{{request.form.username}}">
+      <input class="form-control" type="password" placeholder="Password" name="password" value="{{request.form.password}}">
+      <input class="btn btn-default" type="submit" value="Login">
+    </form>
+  </div>
+{% endblock %}

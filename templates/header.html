@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="https://bootswatch.com/lumen/bootstrap.css" />
+  <title>TripMeal</title>
+</head>
+
+<header>
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="/"><span class="glyphicon glyphicon-home"></span> Home</a>
+        <a class="navbar-text" href="/newrecipe/"><span class="glyphicon glyphicon-grain" aria-hidden="true"></span> New recipe</a>
+      </div>
+
+      <div class="collapse navbar-collapse">
+        <ul class="nav navbar-nav">
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-globe" aria-hidden="true"></span> Regions<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="europe">Europe</a></li>
+              <li><a href="asia">Asia</a></li>
+              <li><a href="africa">Africa</a></li>
+              <li><a href="namerica">N. America</a></li>
+              <li><a href="samerica">S. America</a></li>
+              <li><a href="oceania">Oceania</a></li>
+            </ul>
+          </li>
+        </ul>
+
+        <ul class="navbar-right">
+          {% if session.logged_in %}
+            <p class="navbar-text"><span class="glyphicon glyphicon-user"></span> {{ session.username }}</p>
+            <a class="navbar-text" href="/logout/"><span class="glyphicon glyphicon-log-out"></span> Logout</a></h5>
+          {% else %}
+            <a class="navbar-text" href="/login/"><span class="glyphicon glyphicon-log-in"></span> Login</a>
+            <a class="navbar-text" href="/register/"><span class="glyphicon glyphicon-pencil"></span> Sign up</a>
+          {% endif %}
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+
+
+
+
+  <body>
+    <div class="container-fluid" style="min-hight:100%">
+      {% with messages = get_flashed_messages() %}
+        {% if messages %}
+          {% for message in messages %}
+            <div class="alert alert-dismissible alert-info">
+              <button type="button" class="close" data-dismiss="alert-link">&times;</button>
+              {{message}}
+            </div>
+          {% endfor %}
+        {% endif %}
+      {% endwith %}
+
+      {% block body %}
+
+      {% endblock %}
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  </body>
+</html>
