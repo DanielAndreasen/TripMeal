@@ -1,2 +1,1 @@
-web: gunicorn recipe:app --log-file -
-
+web: gunicorn app:app --log-file -
