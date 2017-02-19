@@ -1,1 +1,1 @@
-web: gunicorn tripmeal.wsgi --log-file -
+python __init__.py
