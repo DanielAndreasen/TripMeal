@@ -1,1 +1,2 @@
-web: python __init__.py
+web: gunicorn recipe:app --log-file -
+
