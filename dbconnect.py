@@ -31,10 +31,10 @@ except Exception:
 
 
 def connection():
-    conn = MySQLdb.connect(host=DATABASES['HOST'],
-                           user=DATABASES['USER'],
-                           passwd=DATABASES['PASSWORD'],
-                           db=DATABASES['NAME']
+    conn = MySQLdb.connect(host=DATABASES['default']['HOST'],
+                           user=DATABASES['default']['USER'],
+                           passwd=DATABASES['default']['PASSWORD'],
+                           db=DATABASES['default']['NAME']
                            )
     # conn = MySQLdb.connect(host="localhost",
     #                        user="root",
