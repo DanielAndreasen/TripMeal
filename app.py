@@ -256,17 +256,13 @@ def favourites_page():
         c, conn = connection()
         _ = c.execute('SELECT favourites FROM users WHERE username = ("%s");' % session['username'])
         favs = c.fetchall()[0][0]
-        if favs is not None:
-            favs = favs[1:]
-            if ',' in favs:
-                favs = favs.split(',')
-            else:
-                favs = [favs]
-        else:
-            return render_template('favourites.html', favourites=False)
         c.close()
         conn.close()
         gc.collect()
+        try:
+            favs = filter(None, favs.split(','))
+        except Exception:
+            return render_template('favourites.html', favourites=False)
         fav_dict = {}
         for fav in favs:
             c, conn = connection()
@@ -275,9 +271,7 @@ def favourites_page():
             c.close()
             conn.close()
             gc.collect()
-            return render_template('favourites.html', favourites=fav_dict)
-        else:
-            return render_template('favourites.html', favourites=False)
+        return render_template('favourites.html', favourites=fav_dict)
     except Exception as e:
         return render_template('favourites.html', favourites=False)
 
