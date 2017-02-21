@@ -189,7 +189,8 @@ def list_recipe():
             c.close()
             conn.close()
             gc.collect()
-            if request.args.get('fav') == 'true':  # Insert recipe as a favourite in database
+            return render_template('recipe.html', recipe=recipe, fav=False)
+            # if request.args.get('fav') == 'true':  # Insert recipe as a favourite in database
             #     try:
             #         c, conn = connection()
             #         _ = c.execute('SELECT favourites FROM users WHERE username = "%s";' % session['username'])
@@ -208,43 +209,43 @@ def list_recipe():
             #         gc.collect()
             #     except Exception:
             #         return render_template('recipe.html', recipe=recipe, fav=True)
-                return render_template('recipe.html', recipe=recipe, fav=True)
+                # return render_template('recipe.html', recipe=recipe, fav=True)
 
-            elif request.args.get('fav') == 'false':  # Delete a favourite from the database
-                try:
-                    c, conn = connection()
-                    _ = c.execute('SELECT favourites FROM users WHERE username = "%s";' % session['username'])
-                    favs = c.fetchall()[0][0]
-                    favs = favs.split(',')
-                    fav = str(recipe[0])
-                    if fav in favs:
-                        idx = favs.index(fav)
-                        _ = favs.pop(idx)
-                        favs = ','.join(favs)
-                        _ = c.execute('UPDATE users SET favourites = "%s" WHERE username = "%s";' % (favs, session['username']))
-                        conn.commit()
-                    c.close()
-                    conn.close()
-                    gc.collect()
-                except Exception:
-                    return render_template('recipe.html', recipe=recipe, fav=False)
-                return render_template('recipe.html', recipe=recipe, fav=False)
-            else:
-                if session['logged_in']:
-                    c, conn = connection()
-                    _ = c.execute('SELECT favourites FROM users WHERE username = ("%s");' % session['username'])
-                    favs = c.fetchall()[0][0].split(',')
-                    c.close()
-                    conn.close()
-                    gc.collect()
-                    return render_template('recipe.html', recipe=recipe, fav=rid in favs)
-                else:
-                    return render_template('recipe.html', recipe=recipe, fav=False)
-        else:
-            return redirect(url_for('list_recipes'))
-    except Exception as e:
-        flash(str(e))
-        return redirect(url_for('list_recipes'))
+    #         elif request.args.get('fav') == 'false':  # Delete a favourite from the database
+    #             try:
+    #                 c, conn = connection()
+    #                 _ = c.execute('SELECT favourites FROM users WHERE username = "%s";' % session['username'])
+    #                 favs = c.fetchall()[0][0]
+    #                 favs = favs.split(',')
+    #                 fav = str(recipe[0])
+    #                 if fav in favs:
+    #                     idx = favs.index(fav)
+    #                     _ = favs.pop(idx)
+    #                     favs = ','.join(favs)
+    #                     _ = c.execute('UPDATE users SET favourites = "%s" WHERE username = "%s";' % (favs, session['username']))
+    #                     conn.commit()
+    #                 c.close()
+    #                 conn.close()
+    #                 gc.collect()
+    #             except Exception:
+    #                 return render_template('recipe.html', recipe=recipe, fav=False)
+    #             return render_template('recipe.html', recipe=recipe, fav=False)
+    #         else:
+    #             if session['logged_in']:
+    #                 c, conn = connection()
+    #                 _ = c.execute('SELECT favourites FROM users WHERE username = ("%s");' % session['username'])
+    #                 favs = c.fetchall()[0][0].split(',')
+    #                 c.close()
+    #                 conn.close()
+    #                 gc.collect()
+    #                 return render_template('recipe.html', recipe=recipe, fav=rid in favs)
+    #             else:
+    #                 return render_template('recipe.html', recipe=recipe, fav=False)
+    #     else:
+    #         return redirect(url_for('list_recipes'))
+    # except Exception as e:
+    #     flash(str(e))
+    #     return redirect(url_for('list_recipes'))
 
 
 @app.route('/favourites/')
