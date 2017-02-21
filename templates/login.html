@@ -10,6 +10,9 @@
       <input class="form-control" type="password" placeholder="Password" name="password" value="{{request.form.password}}">
       <input class="btn btn-default" type="submit" value="Login">
     </form>
+    <br>
+    <br>
+    <p>Don't have a login yet? <a href="/register/">Sign up</a> here today.</p>
     {% if error %}
       <p class="error"><strong>Error:</strong> {{error}}</p>
     {% endif %}
