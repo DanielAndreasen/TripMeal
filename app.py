@@ -291,7 +291,7 @@ def menu_page():
             days.pop(days.index(day))
             menu_dict[day] = [rid, tmp[rid]]
 
-    for _ in range(7-n_favourites+1):
+    for _ in range(7-n_favourites):
         day = random.choice(days)
         days.pop(days.index(day))
         rid = random.choice(rids)
