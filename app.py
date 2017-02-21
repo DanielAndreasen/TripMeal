@@ -248,7 +248,6 @@ def favourites_page():
         c, conn = connection()
         _ = c.execute('SELECT favourites FROM users WHERE username = ("%s");' % session['username'])
         favs = c.fetchall()[0][0]
-        flash(favs)
         if favs is not None:
             favs = favs[1:]
             if ',' in favs:
@@ -272,7 +271,6 @@ def favourites_page():
         else:
             return render_template('favourites.html', favourites=False)
     except Exception as e:
-        flash(str(e))
         return render_template('favourites.html', favourites=False)
 
 
