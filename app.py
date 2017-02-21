@@ -103,13 +103,13 @@ def register_page():
             password = sha256_crypt.encrypt(str(form.password.data))
 
             c, conn = connection()
-            x = c.execute('SELECT * FROM users WHERE username = ("%s")' %
+            x = c.execute('SELECT * FROM users WHERE username = ("%s");' %
                              escape_string(username))
             if int(x) > 0:
                 flash('That username is already taken, please choose another')
                 return render_template('register.html', form=form)
             else:
-                c.execute('INSERT INTO users (username, password, email) VALUES ("%s", "%s", "%s")' %
+                c.execute('INSERT INTO users (username, password, email) VALUES ("%s", "%s", "%s");' %
                           (escape_string(username), escape_string(password), escape_string(email)))
                 conn.commit()
                 flash('Thanks for registering!')
@@ -183,14 +183,14 @@ def list_recipe():
         if request.method == 'GET':
             rid = request.args.get('rid')
             c, conn = connection()
-            _ = c.execute('SELECT * FROM recipes WHERE rid = %s' % escape_string(rid))
+            _ = c.execute('SELECT * FROM recipes WHERE rid = %s;' % escape_string(rid))
             recipe = c.fetchall()[0]
             c.close()
             conn.close()
             gc.collect()
             if request.args.get('fav') == 'true':  # Insert recipe as a favourite in database
                 c, conn = connection()
-                _ = c.execute('SELECT favourites FROM users WHERE username = "%s"' % session['username'])
+                _ = c.execute('SELECT favourites FROM users WHERE username = "%s";' % session['username'])
                 favs = c.fetchall()[0][0]
                 if favs is 'None':
                     _ = c.execute('UPDATE users SET favourites = "%s" WHERE username = "%s";' % (recipe[0], session['username']))
@@ -208,7 +208,7 @@ def list_recipe():
 
             elif request.args.get('fav') == 'false':  # Delete a favourite from the database
                 c, conn = connection()
-                _ = c.execute('SELECT favourites FROM users WHERE username = "%s"' % session['username'])
+                _ = c.execute('SELECT favourites FROM users WHERE username = "%s";' % session['username'])
                 favs = c.fetchall()[0][0]
                 favs = favs.split(',')
                 fav = str(recipe[0])
