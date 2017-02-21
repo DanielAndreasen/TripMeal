@@ -242,24 +242,28 @@ def list_recipe():
 @app.route('/favourites/')
 @login_required
 def favourites_page():
-    c, conn = connection()
-    _ = c.execute('SELECT favourites FROM users WHERE username = ("%s");' % session['username'])
-    favs = c.fetchall()[0][0].split(',')
-    c.close()
-    conn.close()
-    gc.collect()
-    if len(favs) > 1:
-        fav_dict = {}
-        for fav in favs[1:]:
-            c, conn = connection()
-            _ = c.execute('SELECT title FROM recipes WHERE rid = ("%s");' % fav)
-            fav_dict[fav] = c.fetchall()[0][0]
-            c.close()
-            conn.close()
-            gc.collect()
-        return render_template('favourites.html', favourites=fav_dict)
-    else:
-        return render_template('favourites.html', favourites=False)
+    try:
+        c, conn = connection()
+        _ = c.execute('SELECT favourites FROM users WHERE username = ("%s");' % session['username'])
+        favs = c.fetchall()[0][0].split(',')
+        c.close()
+        conn.close()
+        gc.collect()
+        if len(favs) > 1:
+            fav_dict = {}
+            for fav in favs[1:]:
+                c, conn = connection()
+                _ = c.execute('SELECT title FROM recipes WHERE rid = ("%s");' % fav)
+                fav_dict[fav] = c.fetchall()[0][0]
+                c.close()
+                conn.close()
+                gc.collect()
+            return render_template('favourites.html', favourites=fav_dict)
+        else:
+            return render_template('favourites.html', favourites=False)
+    except Exception:
+            return render_template('favourites.html', favourites=False)
+
 
 
 @app.route('/menu/')
