@@ -22,7 +22,11 @@ class RegistrationForm(Form):
 def login_required(f):
     @wraps(f)
     def decorated_function(*args, **kwargs):
-        if session['username'] is None:
+        try:
+            username = session['username']
+        except KeyError:
+            username = None
+        if username is None:
             return redirect(url_for('login_page'))
         return f(*args, **kwargs)
     return decorated_function
