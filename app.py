@@ -192,10 +192,7 @@ def list_recipe():
                 c, conn = connection()
                 _ = c.execute('SELECT favourites FROM users WHERE username = "%s";' % session['username'])
                 favs = c.fetchall()[0][0]
-                flash(favs)
-                flash(str(type(favs)))
-                if favs is 'None':
-                    flash('Recipe added')
+                if favs is None:
                     _ = c.execute('UPDATE users SET favourites = "%s" WHERE username = "%s";' % (recipe[0], session['username']))
                     conn.commit()
                 else:
