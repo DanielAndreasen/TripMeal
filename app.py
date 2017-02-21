@@ -207,20 +207,23 @@ def list_recipe():
                 return render_template('recipe.html', recipe=recipe, fav=True)
 
             elif request.args.get('fav') == 'false':  # Delete a favourite from the database
-                c, conn = connection()
-                _ = c.execute('SELECT favourites FROM users WHERE username = "%s";' % session['username'])
-                favs = c.fetchall()[0][0]
-                favs = favs.split(',')
-                fav = str(recipe[0])
-                if fav in favs:
-                    idx = favs.index(fav)
-                    _ = favs.pop(idx)
-                    favs = ','.join(favs)
-                    _ = c.execute('UPDATE users SET favourites = "%s" WHERE username = "%s";' % (favs, session['username']))
-                    conn.commit()
-                c.close()
-                conn.close()
-                gc.collect()
+                try:
+                    c, conn = connection()
+                    _ = c.execute('SELECT favourites FROM users WHERE username = "%s";' % session['username'])
+                    favs = c.fetchall()[0][0]
+                    favs = favs.split(',')
+                    fav = str(recipe[0])
+                    if fav in favs:
+                        idx = favs.index(fav)
+                        _ = favs.pop(idx)
+                        favs = ','.join(favs)
+                        _ = c.execute('UPDATE users SET favourites = "%s" WHERE username = "%s";' % (favs, session['username']))
+                        conn.commit()
+                    c.close()
+                    conn.close()
+                    gc.collect()
+                except Exception:
+                    return render_template('recipe.html', recipe=recipe, fav=False)
                 return render_template('recipe.html', recipe=recipe, fav=False)
             else:
                 if session['logged_in']:
