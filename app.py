@@ -188,60 +188,55 @@ def list_recipe():
             c.close()
             conn.close()
             gc.collect()
-            flash(request.args.get('fav'))
             if request.args.get('fav') == 'true':  # Insert recipe as a favourite in database
-                try:
-                    c, conn = connection()
-                    _ = c.execute('SELECT favourites FROM users WHERE username = "%s";' % session['username'])
-                    favs = c.fetchall()[0][0]
-                    if favs is 'None':
-                        _ = c.execute('UPDATE users SET favourites = "%s" WHERE username = "%s";' % (recipe[0], session['username']))
+                c, conn = connection()
+                _ = c.execute('SELECT favourites FROM users WHERE username = "%s";' % session['username'])
+                favs = c.fetchall()[0][0]
+                if favs is 'None':
+                    _ = c.execute('UPDATE users SET favourites = "%s" WHERE username = "%s";' % (recipe[0], session['username']))
+                    conn.commit()
+                else:
+                    favs = favs.split(',')
+                    if str(recipe[0]) not in favs:
+                        favs = ','.join(favs)+',%s' % recipe[0]
+                        _ = c.execute('UPDATE users SET favourites = "%s" WHERE username = "%s";' % (favs, session['username']))
                         conn.commit()
-                    else:
-                        favs = favs.split(',')
-                        if str(recipe[0]) not in favs:
-                            favs = ','.join(favs)+',%s' % recipe[0]
-                            _ = c.execute('UPDATE users SET favourites = "%s" WHERE username = "%s";' % (favs, session['username']))
-                            conn.commit()
+                c.close()
+                conn.close()
+                gc.collect()
+                return render_template('recipe.html', recipe=recipe, fav=True)
+            elif request.args.get('fav') == 'false':  # Delete a favourite from the database
+                c, conn = connection()
+                _ = c.execute('SELECT favourites FROM users WHERE username = "%s";' % session['username'])
+                favs = c.fetchall()[0][0]
+                favs = favs.split(',')
+                fav = str(recipe[0])
+                if fav in favs:
+                    idx = favs.index(fav)
+                    _ = favs.pop(idx)
+                    favs = ','.join(favs)
+                    _ = c.execute('UPDATE users SET favourites = "%s" WHERE username = "%s";' % (favs, session['username']))
+                    conn.commit()
+                c.close()
+                conn.close()
+                gc.collect()
+                return render_template('recipe.html', recipe=recipe, fav=False)
+            else:
+                if session['logged_in']:
+                    c, conn = connection()
+                    _ = c.execute('SELECT favourites FROM users WHERE username = ("%s");' % session['username'])
+                    try:
+                        favs = c.fetchall()[0][0].split(',')
+                    except Exception:  # No favs yet
+                        return render_template('recipe.html', recipe=recipe, fav=False)
                     c.close()
                     conn.close()
                     gc.collect()
-                except Exception:
-                    return render_template('recipe.html', recipe=recipe, fav=True)
-                return render_template('recipe.html', recipe=recipe, fav=True)
-
-    #         elif request.args.get('fav') == 'false':  # Delete a favourite from the database
-    #             try:
-    #                 c, conn = connection()
-    #                 _ = c.execute('SELECT favourites FROM users WHERE username = "%s";' % session['username'])
-    #                 favs = c.fetchall()[0][0]
-    #                 favs = favs.split(',')
-    #                 fav = str(recipe[0])
-    #                 if fav in favs:
-    #                     idx = favs.index(fav)
-    #                     _ = favs.pop(idx)
-    #                     favs = ','.join(favs)
-    #                     _ = c.execute('UPDATE users SET favourites = "%s" WHERE username = "%s";' % (favs, session['username']))
-    #                     conn.commit()
-    #                 c.close()
-    #                 conn.close()
-    #                 gc.collect()
-    #             except Exception:
-    #                 return render_template('recipe.html', recipe=recipe, fav=False)
-    #             return render_template('recipe.html', recipe=recipe, fav=False)
-    #         else:
-    #             if session['logged_in']:
-    #                 c, conn = connection()
-    #                 _ = c.execute('SELECT favourites FROM users WHERE username = ("%s");' % session['username'])
-    #                 favs = c.fetchall()[0][0].split(',')
-    #                 c.close()
-    #                 conn.close()
-    #                 gc.collect()
-    #                 return render_template('recipe.html', recipe=recipe, fav=rid in favs)
-    #             else:
-    #                 return render_template('recipe.html', recipe=recipe, fav=False)
-    #     else:
-    #         return redirect(url_for('list_recipes'))
+                    return render_template('recipe.html', recipe=recipe, fav=rid in favs)
+                else:
+                    return render_template('recipe.html', recipe=recipe, fav=False)
+        else:
+            return redirect(url_for('list_recipes'))
     except Exception as e:
         return redirect(url_for('list_recipes'))
 
