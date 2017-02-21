@@ -36,9 +36,5 @@ def connection():
                            passwd=DATABASES['default']['PASSWORD'],
                            db=DATABASES['default']['NAME']
                            )
-    # conn = MySQLdb.connect(host="localhost",
-    #                        user="root",
-    #                        passwd="gichin124",
-    #                        db="tripmeal")
     c = conn.cursor()
     return c, conn
