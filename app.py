@@ -226,7 +226,7 @@ def list_recipe():
                 if session['logged_in']:
                     c, conn = connection()
                     _ = c.execute('SELECT favourites FROM users WHERE username = ("%s");' % session['username'])
-                    favs = c.fetchall()[0][0].split(',')[1:]
+                    favs = c.fetchall()[0][0].split(',')
                     c.close()
                     conn.close()
                     gc.collect()
@@ -251,7 +251,7 @@ def favourites_page():
         gc.collect()
         if len(favs) > 1:
             fav_dict = {}
-            for fav in favs[1:]:
+            for fav in favs:
                 c, conn = connection()
                 _ = c.execute('SELECT title FROM recipes WHERE rid = ("%s");' % fav)
                 fav_dict[fav] = c.fetchall()[0][0]
@@ -265,7 +265,6 @@ def favourites_page():
             return render_template('favourites.html', favourites=False)
 
 
-
 @app.route('/menu/')
 def menu_page():
     menu_dict = {}
@@ -274,12 +273,15 @@ def menu_page():
     rids = all_recipes.keys()
     days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
     if session['logged_in']:  # Include favourites
-        c, conn = connection()
-        _ = c.execute('SELECT favourites FROM users WHERE username = ("%s");' % session['username'])
-        favs = map(int, c.fetchall()[0][0].split(',')[1:])
-        c.close()
-        conn.close()
-        gc.collect
+        try:
+            c, conn = connection()
+            _ = c.execute('SELECT favourites FROM users WHERE username = ("%s");' % session['username'])
+            favs = map(int, c.fetchall()[0][0].split(','))
+            c.close()
+            conn.close()
+            gc.collect
+        except Exception:
+            pass
         n_favourites = len(favs)
         if n_favourites:
             rid = random.choice(favs)
