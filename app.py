@@ -276,12 +276,16 @@ def favourites_page():
 
 @app.route('/menu/')
 def menu_page():
+    try:
+        logged_in = session['logged_in']
+    except KeyError:
+        logged_in = False
     menu_dict = {}
     n_favourites = 0
     all_recipes = get_recipes('all')
     rids = all_recipes.keys()
     days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
-    if session['logged_in']:  # Include favourites
+    if logged_in:  # Include favourites
         try:
             c, conn = connection()
             _ = c.execute('SELECT favourites FROM users WHERE username = ("%s");' % session['username'])
