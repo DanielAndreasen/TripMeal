@@ -189,21 +189,24 @@ def list_recipe():
             conn.close()
             gc.collect()
             if request.args.get('fav') == 'true':  # Insert recipe as a favourite in database
-                c, conn = connection()
-                _ = c.execute('SELECT favourites FROM users WHERE username = "%s";' % session['username'])
-                favs = c.fetchall()[0][0]
-                if favs is 'None':
-                    _ = c.execute('UPDATE users SET favourites = "%s" WHERE username = "%s";' % (recipe[0], session['username']))
-                    conn.commit()
-                else:
-                    favs = favs.split(',')
-                    if str(recipe[0]) not in favs:
-                        favs = ','.join(favs)+',%s' % recipe[0]
-                        _ = c.execute('UPDATE users SET favourites = "%s" WHERE username = "%s";' % (favs, session['username']))
+                try:
+                    c, conn = connection()
+                    _ = c.execute('SELECT favourites FROM users WHERE username = "%s";' % session['username'])
+                    favs = c.fetchall()[0][0]
+                    if favs is 'None':
+                        _ = c.execute('UPDATE users SET favourites = "%s" WHERE username = "%s";' % (recipe[0], session['username']))
                         conn.commit()
-                c.close()
-                conn.close()
-                gc.collect()
+                    else:
+                        favs = favs.split(',')
+                        if str(recipe[0]) not in favs:
+                            favs = ','.join(favs)+',%s' % recipe[0]
+                            _ = c.execute('UPDATE users SET favourites = "%s" WHERE username = "%s";' % (favs, session['username']))
+                            conn.commit()
+                    c.close()
+                    conn.close()
+                    gc.collect()
+                except Exception:
+                    return render_template('recipe.html', recipe=recipe, fav=True)
                 return render_template('recipe.html', recipe=recipe, fav=True)
 
             elif request.args.get('fav') == 'false':  # Delete a favourite from the database
