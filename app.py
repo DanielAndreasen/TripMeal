@@ -236,6 +236,7 @@ def list_recipe():
         else:
             return redirect(url_for('list_recipes'))
     except Exception as e:
+        flash(str(e))
         return redirect(url_for('list_recipes'))
 
 
