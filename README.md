@@ -1,2 +1,2 @@
 # TripMeal
-Source code for https://tripmeal.herokuapp.com/
+Source code for [TripMeal](https://tripmeal.herokuapp.com/). Written with Flask
