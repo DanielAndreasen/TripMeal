@@ -250,6 +250,7 @@ def favourites_page():
         favs = c.fetchall()[0][0]
         flash(favs)
         if favs is not None:
+            favs = favs[1:]
             if ',' in favs:
                 favs = favs.split(',')
             else:
