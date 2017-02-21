@@ -177,7 +177,7 @@ def list_recipes():
     return render_template('recipes.html', recipes=recipes)
 
 
-@app.route('/recipe', methods=['POST', 'GET'])
+@app.route('/recipe', methods=['POST', 'GET'], strict_slashes=False)
 def list_recipe():
     try:
         if request.method == 'GET':
