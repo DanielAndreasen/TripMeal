@@ -280,9 +280,9 @@ def menu_page():
             c.close()
             conn.close()
             gc.collect
+            n_favourites = len(favs)
         except Exception:
             pass
-        n_favourites = len(favs)
         if n_favourites:
             rid = random.choice(favs)
             favs.pop(favs.index(rid))  # Don't use the same recipe twice per week
