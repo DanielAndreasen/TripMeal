@@ -179,7 +179,7 @@ def list_recipes():
 
 @app.route('/recipe', methods=['POST', 'GET'], strict_slashes=False)
 def list_recipe():
-    try:
+    # try:
         if request.method == 'GET':
             rid = request.args.get('rid')
             flash(rid)
