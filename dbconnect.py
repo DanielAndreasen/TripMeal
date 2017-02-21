@@ -23,7 +23,6 @@ try:
             'PORT': url.port,
         })
 
-
         if url.scheme == 'mysql':
             DATABASES['default']['ENGINE'] = 'django.db.backends.mysql'
 except Exception:
