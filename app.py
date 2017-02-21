@@ -268,8 +268,9 @@ def favourites_page():
             return render_template('favourites.html', favourites=fav_dict)
         else:
             return render_template('favourites.html', favourites=False)
-    except Exception:
-            return render_template('favourites.html', favourites=False)
+    except Exception as e:
+        flash(str(e))
+        return render_template('favourites.html', favourites=False)
 
 
 @app.route('/menu/')
