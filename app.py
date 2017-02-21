@@ -247,7 +247,12 @@ def favourites_page():
     try:
         c, conn = connection()
         _ = c.execute('SELECT favourites FROM users WHERE username = ("%s");' % session['username'])
-        favs = c.fetchall()[0][0].split(',')
+        favs = c.fetchall()[0][0]
+        if favs is not None:
+            if ',' in favs:
+                favs = favs.split(',')
+        else:
+            return render_template('favourites.html', favourites=False)
         c.close()
         conn.close()
         gc.collect()
