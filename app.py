@@ -226,7 +226,11 @@ def list_recipe():
                 gc.collect()
                 return render_template('recipe.html', recipe=recipe, fav=False)
             else:
-                if session['logged_in']:
+                try:
+                    logged_in = session['logged_in']
+                except KeyError:
+                    logged_in = False
+                if logged_in:
                     c, conn = connection()
                     _ = c.execute('SELECT favourites FROM users WHERE username = ("%s");' % session['username'])
                     try:
