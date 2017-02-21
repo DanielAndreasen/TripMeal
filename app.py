@@ -248,23 +248,25 @@ def favourites_page():
         c, conn = connection()
         _ = c.execute('SELECT favourites FROM users WHERE username = ("%s");' % session['username'])
         favs = c.fetchall()[0][0]
+        flash(favs)
         if favs is not None:
             if ',' in favs:
                 favs = favs.split(',')
+            else:
+                favs = [favs]
         else:
             return render_template('favourites.html', favourites=False)
         c.close()
         conn.close()
         gc.collect()
-        if len(favs) > 1:
-            fav_dict = {}
-            for fav in favs:
-                c, conn = connection()
-                _ = c.execute('SELECT title FROM recipes WHERE rid = ("%s");' % fav)
-                fav_dict[fav] = c.fetchall()[0][0]
-                c.close()
-                conn.close()
-                gc.collect()
+        fav_dict = {}
+        for fav in favs:
+            c, conn = connection()
+            _ = c.execute('SELECT title FROM recipes WHERE rid = ("%s");' % fav)
+            fav_dict[fav] = c.fetchall()[0][0]
+            c.close()
+            conn.close()
+            gc.collect()
             return render_template('favourites.html', favourites=fav_dict)
         else:
             return render_template('favourites.html', favourites=False)
