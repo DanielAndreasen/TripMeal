@@ -189,7 +189,7 @@ def list_recipe():
             c.close()
             conn.close()
             gc.collect()
-            # if request.args.get('fav') == 'true':  # Insert recipe as a favourite in database
+            if request.args.get('fav') == 'true':  # Insert recipe as a favourite in database
             #     try:
             #         c, conn = connection()
             #         _ = c.execute('SELECT favourites FROM users WHERE username = "%s";' % session['username'])
