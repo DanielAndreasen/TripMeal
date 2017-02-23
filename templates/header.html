@@ -1,44 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <link rel="stylesheet" href="https://bootswatch.com/lumen/bootstrap.css" />
-  <title>TripMeal</title>
-</head>
+    <link rel="stylesheet" href="https://bootswatch.com/lumen/bootstrap.css" />
+    <title>TripMeal</title>
+  </head>
 
-<header>
-  <nav class="navbar navbar-default">
-    <div class="container-fluid">
-      <div class="navbar-header">
-        <a class="navbar-brand" href="/"><span class="glyphicon glyphicon-home"></span> Home</a>
-        <a class="navbar-text" href="/newrecipe/"><span class="glyphicon glyphicon-grain" aria-hidden="true"></span> New recipe</a>
-        <a class="navbar-text" href="/recipes/"><span class="glyphicon glyphicon-list" aria-hidden="true"></span> All recipes</a>
-        <a class="navbar-text" href="/menu/"><span class="glyphicon glyphicon-calendar" aria-hidden="true"></span> Weekly menu</a>
+  <header>
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="/"><span class="glyphicon glyphicon-home"></span> Home</a>
+          <a class="navbar-text" href="/newrecipe/"><span class="glyphicon glyphicon-grain" aria-hidden="true"></span> New recipe</a>
+          <a class="navbar-text" href="/recipes/"><span class="glyphicon glyphicon-list" aria-hidden="true"></span> All recipes</a>
+          <a class="navbar-text" href="/menu/"><span class="glyphicon glyphicon-calendar" aria-hidden="true"></span> Weekly menu</a>
+        </div>
+
+        <div class="collapse navbar-collapse">
+          <ul class="navbar-right">
+            {% if session.logged_in %}
+              <a class="navbar-text" href="/favourites/"><span class="glyphicon glyphicon-heart"></span> Favourites</a>
+              <a class="navbar-text" href="/favourites/"><span class="glyphicon glyphicon-user"></span> {{ session.username }}</a>
+              <a class="navbar-text" href="/logout/"><span class="glyphicon glyphicon-log-out"></span> Logout</a></h5>
+            {% else %}
+              <a class="navbar-text" href="/register/"><span class="glyphicon glyphicon-pencil"></span> Sign up</a>
+              <a class="navbar-text" href="/login/"><span class="glyphicon glyphicon-log-in"></span> Login</a>
+            {% endif %}
+          </ul>
+        </div>
       </div>
-
-      <div class="collapse navbar-collapse">
-
-        <ul class="navbar-right">
-          {% if session.logged_in %}
-            <a class="navbar-text" href="/favourites/"><span class="glyphicon glyphicon-heart"></span> Favourites</a>
-            <a class="navbar-text" href="/favourites/"><span class="glyphicon glyphicon-user"></span> {{ session.username }}</a>
-            <a class="navbar-text" href="/logout/"><span class="glyphicon glyphicon-log-out"></span> Logout</a></h5>
-          {% else %}
-            <a class="navbar-text" href="/register/"><span class="glyphicon glyphicon-pencil"></span> Sign up</a>
-            <a class="navbar-text" href="/login/"><span class="glyphicon glyphicon-log-in"></span> Login</a>
-          {% endif %}
-        </ul>
-      </div>
-    </div>
-  </nav>
-</header>
-
-
-
+    </nav>
+  </header>
 
   <body>
     <div class="container-fluid" style="min-hight:100%">
