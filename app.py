@@ -56,18 +56,25 @@ def get_recipes(rid):
 
 def convert2HTML(text):
     if ('1.' in text) and ('2.' in text) and ('3.' in text):  # We have a list here
-        i = 1
+        final = 1
+        for line in text.split('\r\n'):
+            if line.startswith('%s.' % final):
+                final += 1
+
         newtext = ''
+        i = 1
         for line in text.split('\r\n'):
             if line.startswith('%s.' % i):
                 if i == 1:
-                    newtext += '<ul>\r\n'
+                    newtext += '<ol>\r\n'
                 i += 1
                 newline = '<li>' + line[2:] + '</li>\r\n'
                 newtext += newline
+                if i == final:
+                    newtext +=  '</ol>'
             else:
                 newtext += line + '\r\n'
-        return newtext + '</ul>'
+        return newtext
 
     else:
         return text
