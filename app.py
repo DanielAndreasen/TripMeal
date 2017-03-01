@@ -54,6 +54,25 @@ def get_recipes(rid):
         return rid_dict
 
 
+def convert2HTML(text):
+    if ('1.' in text) and ('2.' in text) and ('3.' in text):  # We have a list here
+        i = 1
+        newtext = ''
+        for line in text.split('\r\n'):
+            if line.startswith('%s.' % i):
+                if i == 1:
+                    newtext += '<ul>\r\n'
+                i += 1
+                newline = '<li>' + line[2:] + '</li>\r\n'
+                newtext += newline
+            else:
+                newtext += line + '\r\n'
+        return newtext + '</ul>'
+
+    else:
+        return text
+
+
 # Setup Flask
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'nuiv32orh8f34uifvnewivuh3924j3gp09'
@@ -188,7 +207,8 @@ def list_recipe():
             rid = request.args.get('rid')
             c, conn = connection()
             _ = c.execute('SELECT * FROM recipes WHERE rid = %s;' % escape_string(rid))
-            recipe = c.fetchall()[0]
+            recipe = list(c.fetchall()[0])
+            recipe[4] = convert2HTML(recipe[4])
             c.close()
             conn.close()
             gc.collect()
