@@ -85,9 +85,9 @@ app = Flask(__name__)
 app.config['SECRET_KEY'] = 'nuiv32orh8f34uifvnewivuh3924j3gp09'
 
 
-@app.route('/')
-def homepage():
-    return render_template('main.html')
+# @app.route('/')
+# def homepage():
+#     return render_template('main.html')
 
 
 @app.route('/login/', methods=['GET', 'POST'])
@@ -194,7 +194,7 @@ def background():
     except Error:
         return str(e)
 
-
+@app.route('/')
 @app.route('/recipes/')
 def list_recipes():
     c, conn = connection()
