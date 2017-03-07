@@ -161,10 +161,10 @@ def register_page():
 
                 session['logged_in'] = True
                 session['username'] = username
-                return redirect(url_for('homepage'))
+                return redirect(url_for('list_recipes'))
         return render_template('register.html', form=form)
     except Exception as e:
-        return str(e)
+        return render_template('register.html')
 
 
 @app.route('/newrecipe/', methods=['GET', 'POST'])
