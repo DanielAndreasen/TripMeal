@@ -368,7 +368,10 @@ def user_page():
         gc.collect()
 
         rank = get_ranking()
-        number_recipes = rank[user]
+        if user not in rank.keys():
+            number_recipes = 0
+        else:
+            number_recipes = rank[user]
         total_recipes = sum(rank.values())
         return render_template('user.html', user=user, nr=number_recipes, tr=total_recipes, recipes=recipes)
     except Exception as e:
