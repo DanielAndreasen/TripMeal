@@ -63,6 +63,7 @@ def get_ranking():
     gc.collect()
 
     d = {name: int(count) for name, count in d}
+    return d
 
 
 def convert2HTML(text):
@@ -360,7 +361,6 @@ def user_page():
     try:
         user = session['username']
         c, conn = connection()
-        # _ = c.execute('SELECT user, COUNT(*) AS nu FROM recipes GROUP BY user ORDER BY nu DESC;')
         _ = c.execute('SELECT rid, title FROM recipes WHERE user="%s";' % user)
         recipes = c.fetchall()
         c.close()
@@ -372,7 +372,6 @@ def user_page():
         total_recipes = sum(rank.values())
         return render_template('user.html', user=user, nr=number_recipes, tr=total_recipes, recipes=recipes)
     except Exception as e:
-        flash(str(e))
         return render_template('favourites.html', favourites=False)
 
 
