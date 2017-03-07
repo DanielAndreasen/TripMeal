@@ -371,8 +371,8 @@ def user_page():
         number_recipes = rank[user]
         total_recipes = sum(rank.values())
         return render_template('user.html', user=user, nr=number_recipes, tr=total_recipes, recipes=recipes)
-
-    except Exception:
+    except Exception as e:
+        flash(str(e))
         return render_template('favourites.html', favourites=False)
 
 
