@@ -161,7 +161,7 @@ def register_page():
 
                 session['logged_in'] = True
                 session['username'] = username
-                return redirect(url_for('list_recipes'))
+                return redirect(url_for('favourites_page'))
         return render_template('register.html', form=form)
     except Exception as e:
         return render_template('register.html')
