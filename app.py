@@ -131,7 +131,7 @@ def logout_page():
     if session['logged_in']:
         session['logged_in'] = False
         session['username'] = None
-    return redirect(url_for('homepage'))
+    return redirect(url_for('list_recipes'))
 
 
 @app.route('/register/', methods=['GET', 'POST'])
