@@ -54,6 +54,17 @@ def get_recipes(rid):
         return rid_dict
 
 
+def get_ranking():
+    c, conn = connection()
+    _ = c.execute('SELECT user, COUNT(*) AS nu FROM recipes GROUP BY user ORDER BY nu DESC;')
+    d = c.fetchall()
+    c.close()
+    conn.close()
+    gc.collect()
+
+    d = {name: int(count) for name, count in d}
+
+
 def convert2HTML(text):
     if ('1.' in text) and ('2.' in text) and ('3.' in text):  # We have a list here
         final = 1
@@ -104,7 +115,7 @@ def login_page():
                 session['username'] = request.form['username']
                 session['favourites'] = data[4]
                 flash('You are now logged in')
-                return redirect(url_for('favourites_page'))
+                return redirect(url_for('user_page'))
             else:
                 error = 'Invalid credentials, try again'
         gc.collect()
@@ -341,6 +352,29 @@ def menu_page():
         menu_dict[day] = [rid, tmp[rid]]
 
     return render_template('menu.html', menu=menu_dict)
+
+
+@app.route('/user/')
+@login_required
+def user_page():
+    try:
+        user = session['username']
+        c, conn = connection()
+        # _ = c.execute('SELECT user, COUNT(*) AS nu FROM recipes GROUP BY user ORDER BY nu DESC;')
+        _ = c.execute('SELECT rid, title FROM recipes WHERE user="%s";' % user)
+        recipes = c.fetchall()
+        c.close()
+        conn.close()
+        gc.collect()
+
+        rank = get_ranking()
+        number_recipes = rank[user]
+        total_recipes = sum(rank.values())
+        return render_template('user.html', user=user, nr=number_recipes, tr=total_recipes, recipes=recipes)
+
+    except Exception:
+        return render_template('favourites.html', favourites=False)
+
 
 
 if __name__ == '__main__':

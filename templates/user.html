@@ -1,0 +1,29 @@
+{% extends "header.html" %}
+
+{% block body %}
+
+<h3>Welcome {{user}}. Thank you for using TripMeal</h3>
+
+<div class="col-lg-offset-1 col-lg-5" style="">
+  <h3>All user recipes</h3>
+  <p>You have added {{nr}} out of {{tr}} recipes.</p>
+  {% if nr != 0 %}
+    <ul>
+      {% for recipe in recipes %}
+        <li><a href="/recipe?rid={{recipe[0]}}">{{recipe[1]}}</a></li>
+      {% endfor %}
+    </ul>
+  {% else %}
+    <p>Maybe you can contribute with your own favourite recipe and make TripMeal
+    even better :)</p>
+  {% endif %}
+</div>
+
+<div class="col-lg-5">
+  <h3>Create a weekly menu</h3>
+  <p>Click <a href="/menu/">here</a> to create a weekly menu. Your favourites
+  will be among the list. If you have less than 7 favourites, we will pick
+  the rest for you. Good luck :)</p>
+</div>
+
+{% endblock %}

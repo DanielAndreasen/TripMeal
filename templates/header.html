@@ -24,7 +24,7 @@
           <ul class="navbar-right">
             {% if session.logged_in %}
               <a class="navbar-text" href="/favourites/"><span class="glyphicon glyphicon-heart"></span> Favourites</a>
-              <a class="navbar-text" href="/favourites/"><span class="glyphicon glyphicon-user"></span> {{ session.username }}</a>
+              <a class="navbar-text" href="/user/"><span class="glyphicon glyphicon-user"></span> {{ session.username }}</a>
               <a class="navbar-text" href="/logout/"><span class="glyphicon glyphicon-log-out"></span> Logout</a></h5>
             {% else %}
               <a class="navbar-text" href="/register/"><span class="glyphicon glyphicon-pencil"></span> Sign up</a>
