@@ -13,10 +13,11 @@ class RegistrationForm(Form):
     username = TextField('Username', [validators.Length(min=4, max=25)])
     email = TextField('Email address', [validators.Length(min=5, max=50)])
     password = PasswordField('Password', [validators.Required(),
-                                          validators.EqualTo('confirm', message='Passwords must match')])
+                                          validators.EqualTo('confirm',
+                                                             message='Passwords must match')])
     confirm = PasswordField('Repeat password')
-    accept_tos = BooleanField('I accept the <a href="/tos/">Terms of Service</a> and the <a href="/privacy/">Privacy Notice</a>.',
-                              [validators.Required()])
+    # accept_tos = BooleanField('I accept the <a href="/tos/">Terms of Service</a> and the <a href="/privacy/">Privacy Notice</a>.',
+                            #   [validators.Required()])
 
 
 def login_required(f):
