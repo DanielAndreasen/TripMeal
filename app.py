@@ -16,8 +16,8 @@ class RegistrationForm(Form):
                                           validators.EqualTo('confirm',
                                                              message='Passwords must match')])
     confirm = PasswordField('Repeat password')
-    # accept_tos = BooleanField('I accept the <a href="/tos/">Terms of Service</a> and the <a href="/privacy/">Privacy Notice</a>.',
-                            #   [validators.Required()])
+    accept_tos = BooleanField('I accept the <a href="/tos/">Terms of Service</a> and the <a href="/privacy/">Privacy Notice</a>.',
+                              [validators.Required()])
 
 
 def login_required(f):
@@ -138,8 +138,8 @@ def logout_page():
 
 @app.route('/register/', methods=['GET', 'POST'])
 def register_page():
+    form = RegistrationForm(request.form)
     try:
-        form = RegistrationForm(request.form)
         if request.method == 'POST' and form.validate():
             username = form.username.data
             email = form.email.data
@@ -165,7 +165,7 @@ def register_page():
                 return redirect(url_for('favourites_page'))
         return render_template('register.html', form=form)
     except Exception as e:
-        return render_template('register.html')
+        return render_template('register.html', form=form)
 
 
 @app.route('/newrecipe/', methods=['GET', 'POST'])
