@@ -109,12 +109,12 @@ def login_page():
         error = None
         c, conn = connection()
         if request.method == 'POST':
-            data = c.execute('SELECT * FROM users WHERE username = ("%s");' %
-                             escape_string(request.form['username']))
+            username = escape_string(request.form['username'])
+            data = c.execute('SELECT * FROM users WHERE username = ("%s");' % username)
             data = c.fetchone()
-            if sha256_crypt.verify(request.form['password'], data[2]):
+            if sha256_crypt.verify(request.form['password'], data[2]) and (data[1] == username):
                 session['logged_in'] = True
-                session['username'] = request.form['username']
+                session['username'] = username
                 session['favourites'] = data[4]
                 flash('You are now logged in')
                 return redirect(url_for('user_page'))
