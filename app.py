@@ -331,7 +331,8 @@ def menu_page():
         try:
             c, conn = connection()
             _ = c.execute('SELECT favourites FROM users WHERE username = ("%s");' % session['username'])
-            favs = map(int, c.fetchall()[0][0].split(','))
+            d = c.fetchall()[0][0]
+            favs = map(int, filter(None, d.split(',')))
             c.close()
             conn.close()
             gc.collect
@@ -339,18 +340,19 @@ def menu_page():
         except Exception:
             pass
         if n_favourites:
-            rid = random.choice(favs)
-            favs.pop(favs.index(rid))  # Don't use the same recipe twice per week
-            tmp = get_recipes(rid)
-            day = random.choice(days)
-            days.pop(days.index(day))
-            menu_dict[day] = [rid, tmp[rid]]
+            while len(favs):
+                rid = random.choice(favs)
+                favs.pop(favs.index(rid))  # Don't use the same recipe twice per week
+                tmp = {rid: all_recipes[rid]}
+                day = random.choice(days)
+                days.pop(days.index(day))
+                menu_dict[day] = [rid, tmp[rid]]
 
     for _ in range(7-n_favourites):
         day = random.choice(days)
         days.pop(days.index(day))
         rid = random.choice(rids)
-        tmp = get_recipes(rid)
+        tmp = {rid: all_recipes[rid]}
         menu_dict[day] = [rid, tmp[rid]]
 
     return render_template('menu.html', menu=menu_dict)
@@ -377,7 +379,6 @@ def user_page():
         return render_template('user.html', user=user, nr=number_recipes, tr=total_recipes, recipes=recipes)
     except Exception as e:
         return render_template('favourites.html', favourites=False)
-
 
 
 if __name__ == '__main__':
