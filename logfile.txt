@@ -1,0 +1,303 @@
+2017-02-21T21:42:43.557562+00:00 heroku[router]: at=info method=GET path="/" host=tripmeal.herokuapp.com request_id=c75b6e0f-5461-422b-8e5f-95d8aab032d7 fwd="87.196.80.248" dyno=web.1 connect=4ms service=5ms status=200 bytes=2241
+2017-02-21T21:42:46.658734+00:00 heroku[router]: at=info method=GET path="/favicon.ico" host=tripmeal.herokuapp.com request_id=fe9933a9-d05b-46c8-ab72-4c34ce899a10 fwd="87.196.80.248" dyno=web.1 connect=5ms service=4ms status=404 bytes=386
+2017-02-21T21:43:16.529025+00:00 heroku[router]: at=info method=GET path="/recipes/" host=tripmeal.herokuapp.com request_id=95e42bea-5f16-41fa-9225-087421cfe74f fwd="87.196.80.248" dyno=web.1 connect=3ms service=1154ms status=200 bytes=2171
+2017-02-21T21:45:16.776070+00:00 heroku[router]: at=info method=GET path="/" host=tripmeal.herokuapp.com request_id=e36121f9-b893-4ac9-b74f-c557549e545d fwd="88.88.74.51" dyno=web.1 connect=0ms service=2ms status=200 bytes=2241
+2017-02-21T21:45:30.074938+00:00 heroku[router]: at=info method=GET path="/" host=tripmeal.herokuapp.com request_id=a1e45557-cc75-450e-9a05-a4a1432748dd fwd="188.183.139.187" dyno=web.1 connect=1ms service=3ms status=200 bytes=2241
+2017-02-21T21:59:23.966959+00:00 heroku[router]: at=info method=GET path="/" host=tripmeal.herokuapp.com request_id=67de6ed1-7941-49ef-a7a2-e0248e5d1826 fwd="188.83.211.65" dyno=web.1 connect=1ms service=3ms status=200 bytes=2241
+2017-02-21T22:03:15.445352+00:00 heroku[router]: at=info method=GET path="/" host=tripmeal.herokuapp.com request_id=50805736-635d-4ec8-9d1e-af8bf7943607 fwd="2.104.121.97" dyno=web.1 connect=0ms service=2ms status=200 bytes=2241
+2017-02-21T22:08:02.620597+00:00 heroku[router]: at=info method=GET path="/" host=tripmeal.herokuapp.com request_id=e616c534-e04e-4b59-88be-059e77666caa fwd="188.180.206.150" dyno=web.1 connect=1ms service=2ms status=200 bytes=2241
+2017-02-21T22:15:41.404622+00:00 heroku[router]: at=info method=GET path="/" host=tripmeal.herokuapp.com request_id=77bcb5d9-a74c-4fd6-86f4-1d5c296917ed fwd="84.90.148.119" dyno=web.1 connect=1ms service=2ms status=200 bytes=2241
+2017-02-21T22:16:39.264640+00:00 heroku[router]: at=info method=GET path="/" host=tripmeal.herokuapp.com request_id=8e74a848-d6ab-48f2-a0fd-2c3c13afa5b5 fwd="5.186.115.10" dyno=web.1 connect=2ms service=3ms status=200 bytes=2241
+2017-02-21T22:18:23.936316+00:00 heroku[router]: at=info method=GET path="/" host=tripmeal.herokuapp.com request_id=81352484-743b-4a7f-bc3c-17bcf9c0b1fa fwd="94.61.237.55" dyno=web.1 connect=1ms service=2ms status=200 bytes=2241
+2017-02-21T22:18:42.554165+00:00 heroku[router]: at=info method=GET path="/" host=tripmeal.herokuapp.com request_id=fadecf51-faae-4802-b1de-089178b3ad1f fwd="62.199.200.18" dyno=web.1 connect=1ms service=3ms status=200 bytes=2241
+2017-02-21T22:19:01.255123+00:00 heroku[router]: at=info method=GET path="/" host=tripmeal.herokuapp.com request_id=4888a81b-5e5a-4bca-b307-0165d56a7447 fwd="62.199.200.18" dyno=web.1 connect=0ms service=2ms status=200 bytes=2241
+2017-02-21T22:19:06.193807+00:00 heroku[router]: at=info method=GET path="/favicon.ico" host=tripmeal.herokuapp.com request_id=43491e10-73ae-420e-9bc5-de3abf9d486b fwd="62.199.200.18" dyno=web.1 connect=1ms service=3ms status=404 bytes=386
+2017-02-21T22:19:16.383023+00:00 heroku[router]: at=info method=GET path="/logout/" host=tripmeal.herokuapp.com request_id=c85851cc-1c7c-41a9-9fd7-d8f861b0f6ed fwd="176.79.40.126" dyno=web.1 connect=1ms service=183ms status=302 bytes=574
+2017-02-21T22:19:16.595037+00:00 heroku[router]: at=info method=GET path="/" host=tripmeal.herokuapp.com request_id=9669f081-8688-4f6d-ab0e-0a6d84283cf1 fwd="176.79.40.126" dyno=web.1 connect=1ms service=3ms status=200 bytes=2241
+2017-02-21T22:19:26.649392+00:00 heroku[router]: at=info method=GET path="/" host=tripmeal.herokuapp.com request_id=c4ac38d4-2e31-46cd-bc61-73650589d22f fwd="62.199.200.18" dyno=web.1 connect=1ms service=3ms status=200 bytes=2241
+2017-02-21T22:19:31.329948+00:00 heroku[router]: at=info method=GET path="/favicon.ico" host=tripmeal.herokuapp.com request_id=7929fba5-5968-4d38-ba9d-8a04c34b1c93 fwd="62.199.200.18" dyno=web.1 connect=0ms service=2ms status=404 bytes=386
+2017-02-21T22:19:31.807688+00:00 heroku[router]: at=info method=GET path="/register/" host=tripmeal.herokuapp.com request_id=63489b9c-219a-46bc-b2a2-84ee597395da fwd="176.79.40.126" dyno=web.1 connect=1ms service=23ms status=200 bytes=2774
+2017-02-21T22:19:53.071031+00:00 heroku[router]: at=info method=POST path="/register/" host=tripmeal.herokuapp.com request_id=3a830e67-13a2-4375-8d63-aef5c69cec54 fwd="176.79.40.126" dyno=web.1 connect=1ms service=451ms status=302 bytes=672
+2017-02-21T22:19:53.252001+00:00 heroku[router]: at=info method=GET path="/" host=tripmeal.herokuapp.com request_id=5c9879d7-e305-45b6-ac1a-21e2c1b8de92 fwd="176.79.40.126" dyno=web.1 connect=1ms service=4ms status=200 bytes=2765
+2017-02-21T22:19:58.304302+00:00 heroku[router]: at=info method=GET path="/" host=tripmeal.herokuapp.com request_id=3db7117c-1825-4b9f-937a-e6f37751b0a8 fwd="93.166.141.247" dyno=web.1 connect=1ms service=2ms status=200 bytes=2241
+2017-02-21T22:20:00.113609+00:00 heroku[router]: at=info method=GET path="/favicon.ico" host=tripmeal.herokuapp.com request_id=471e2acf-ea6e-4d77-a1c6-e972951e00ff fwd="93.166.141.247" dyno=web.1 connect=1ms service=2ms status=404 bytes=386
+2017-02-21T22:20:03.442687+00:00 heroku[router]: at=info method=GET path="/" host=tripmeal.herokuapp.com request_id=2a52c40c-5065-49b5-8a4a-48739183a3f8 fwd="93.166.141.247" dyno=web.1 connect=1ms service=3ms status=200 bytes=2241
+2017-02-21T22:20:06.127194+00:00 heroku[router]: at=info method=GET path="/menu/" host=tripmeal.herokuapp.com request_id=d63b4051-2576-4728-88c4-7a36a86fc6a8 fwd="93.166.141.247" dyno=web.1 connect=0ms service=171ms status=200 bytes=2359
+2017-02-21T22:20:12.856280+00:00 heroku[router]: at=info method=GET path="/recipes/" host=tripmeal.herokuapp.com request_id=f075b76a-5e64-4762-b7ff-9486c05b5c8b fwd="93.166.141.247" dyno=web.1 connect=1ms service=23ms status=200 bytes=2171
+2017-02-21T22:20:14.703528+00:00 heroku[router]: at=info method=GET path="/newrecipe/" host=tripmeal.herokuapp.com request_id=86cc57bc-5db2-4725-80a3-db180b79d5b3 fwd="93.166.141.247" dyno=web.1 connect=1ms service=2ms status=302 bytes=434
+2017-02-21T22:20:14.832564+00:00 heroku[router]: at=info method=GET path="/login/" host=tripmeal.herokuapp.com request_id=0b29bd23-2bb6-48d1-a232-2096852468ab fwd="93.166.141.247" dyno=web.1 connect=0ms service=22ms status=200 bytes=2300
+2017-02-21T22:21:10.128053+00:00 heroku[router]: at=info method=GET path="/recipes/" host=tripmeal.herokuapp.com request_id=c87b0372-cac8-4320-b778-670606bf8962 fwd="176.79.40.126" dyno=web.1 connect=1ms service=38ms status=200 bytes=2294
+2017-02-21T22:21:13.217859+00:00 heroku[router]: at=info method=GET path="/recipe?rid=42" host=tripmeal.herokuapp.com request_id=94a6d747-f0d7-452b-bfe1-beffd134aad9 fwd="176.79.40.126" dyno=web.1 connect=1ms service=37ms status=200 bytes=3065
+2017-02-21T22:21:15.411890+00:00 heroku[router]: at=info method=GET path="/recipe?rid=42&fav=true" host=tripmeal.herokuapp.com request_id=1b8aa337-a690-40e6-a991-39ed7c2393a8 fwd="176.79.40.126" dyno=web.1 connect=1ms service=156ms status=200 bytes=3065
+2017-02-21T22:21:21.598733+00:00 heroku[router]: at=info method=GET path="/recipe?rid=42&fav=false" host=tripmeal.herokuapp.com request_id=20e25257-0cc2-490b-a45c-a469d25e2ced fwd="176.79.40.126" dyno=web.1 connect=1ms service=94ms status=200 bytes=3065
+2017-02-21T22:21:37.644326+00:00 heroku[router]: at=info method=GET path="/" host=tripmeal.herokuapp.com request_id=b19ce5c6-93c2-4861-b45a-7b2314fe6384 fwd="5.172.237.14" dyno=web.1 connect=0ms service=2ms status=200 bytes=2241
+2017-02-21T22:21:44.864118+00:00 heroku[router]: at=info method=GET path="/favicon.ico" host=tripmeal.herokuapp.com request_id=cc33dfbe-6895-4f60-9d0b-d8d79acfc98d fwd="5.172.237.14" dyno=web.1 connect=0ms service=1ms status=404 bytes=386
+2017-02-21T22:22:08.217135+00:00 heroku[router]: at=info method=GET path="/register/" host=tripmeal.herokuapp.com request_id=a376413b-3271-4dbb-b81b-c5249700be4a fwd="93.166.141.247" dyno=web.1 connect=1ms service=5ms status=200 bytes=2774
+2017-02-21T22:22:11.925865+00:00 heroku[router]: at=info method=GET path="/recipe?rid=42&fav=true" host=tripmeal.herokuapp.com request_id=cbe26988-3fdd-422f-9dcc-3399d39815a5 fwd="176.79.40.126" dyno=web.1 connect=1ms service=109ms status=200 bytes=3065
+2017-02-21T22:22:27.585292+00:00 heroku[router]: at=info method=GET path="/recipes/" host=tripmeal.herokuapp.com request_id=a40074bf-5bf1-460f-8bdb-e6d9ce833acc fwd="5.172.237.14" dyno=web.1 connect=0ms service=33ms status=200 bytes=2171
+2017-02-21T22:22:32.219651+00:00 heroku[router]: at=info method=GET path="/recipe?rid=2" host=tripmeal.herokuapp.com request_id=6db3abc9-8f0f-4cfd-80cc-e66a23a5eaac fwd="5.172.237.14" dyno=web.1 connect=0ms service=28ms status=200 bytes=2364
+2017-02-21T22:22:35.281817+00:00 heroku[router]: at=info method=POST path="/register/" host=tripmeal.herokuapp.com request_id=08ffba20-130f-4d1e-824a-10cfa87261fe fwd="93.166.141.247" dyno=web.1 connect=1ms service=656ms status=302 bytes=652
+2017-02-21T22:22:35.427206+00:00 heroku[router]: at=info method=GET path="/" host=tripmeal.herokuapp.com request_id=10711cdd-509a-44fb-a94c-9e297a6d7d7e fwd="93.166.141.247" dyno=web.1 connect=1ms service=5ms status=200 bytes=2734
+2017-02-21T22:22:38.125560+00:00 heroku[router]: at=info method=GET path="/recipe?rid=12" host=tripmeal.herokuapp.com request_id=6e264a3d-5da9-4f6c-a93c-731b32fad133 fwd="5.172.237.14" dyno=web.1 connect=0ms service=32ms status=200 bytes=3119
+2017-02-21T22:22:43.802097+00:00 heroku[router]: at=info method=GET path="/recipe?rid=22" host=tripmeal.herokuapp.com request_id=38d9cf32-62f9-4aaf-a1b1-f769fa9bcb1b fwd="5.172.237.14" dyno=web.1 connect=0ms service=20ms status=200 bytes=2743
+2017-02-21T22:22:48.385382+00:00 heroku[router]: at=info method=GET path="/recipe?rid=42" host=tripmeal.herokuapp.com request_id=619c0e64-b92a-41e8-bb38-cd4b69cc1bc5 fwd="5.172.237.14" dyno=web.1 connect=0ms service=23ms status=200 bytes=2813
+2017-02-21T22:22:58.186359+00:00 heroku[router]: at=info method=GET path="/menu/" host=tripmeal.herokuapp.com request_id=af5e1f61-8e94-4a79-a48e-1e4b56b08109 fwd="5.172.237.14" dyno=web.1 connect=0ms service=604ms status=200 bytes=2350
+2017-02-21T22:28:44.070921+00:00 heroku[router]: at=info method=GET path="/" host=tripmeal.herokuapp.com request_id=d639e8be-efe7-4ce3-9afc-3d3cc01efb81 fwd="84.238.89.251" dyno=web.1 connect=1ms service=2ms status=200 bytes=2241
+2017-02-21T22:30:23.664396+00:00 heroku[web.1]: Restarting
+2017-02-21T22:30:23.665467+00:00 heroku[web.1]: State changed from up to starting
+2017-02-21T22:30:24.376323+00:00 app[web.1]: [2017-02-21 22:30:24 +0000] [10] [INFO] Worker exiting (pid: 10)
+2017-02-21T22:30:24.381081+00:00 app[web.1]: [2017-02-21 22:30:24 +0000] [4] [INFO] Handling signal: term
+2017-02-21T22:30:24.386281+00:00 app[web.1]: [2017-02-21 22:30:24 +0000] [9] [INFO] Worker exiting (pid: 9)
+2017-02-21T22:30:24.429944+00:00 app[web.1]: [2017-02-21 22:30:24 +0000] [4] [INFO] Shutting down: Master
+2017-02-21T22:30:24.363192+00:00 heroku[web.1]: Stopping all processes with SIGTERM
+2017-02-21T22:30:24.561063+00:00 heroku[web.1]: Process exited with status 0
+2017-02-21T22:30:27.376460+00:00 heroku[web.1]: Starting process with command `gunicorn app:app --log-file -`
+2017-02-21T22:30:31.143686+00:00 heroku[web.1]: State changed from starting to up
+2017-02-21T22:30:31.081097+00:00 app[web.1]: [2017-02-21 22:30:31 +0000] [4] [INFO] Starting gunicorn 19.6.0
+2017-02-21T22:30:31.083387+00:00 app[web.1]: [2017-02-21 22:30:31 +0000] [4] [INFO] Listening at: http://0.0.0.0:52824 (4)
+2017-02-21T22:30:31.083902+00:00 app[web.1]: [2017-02-21 22:30:31 +0000] [4] [INFO] Using worker: sync
+2017-02-21T22:30:31.105706+00:00 app[web.1]: [2017-02-21 22:30:31 +0000] [9] [INFO] Booting worker with pid: 9
+2017-02-21T22:30:31.160071+00:00 app[web.1]: [2017-02-21 22:30:31 +0000] [10] [INFO] Booting worker with pid: 10
+2017-02-21T22:30:35.613805+00:00 heroku[router]: at=info method=GET path="/favourites/" host=tripmeal.herokuapp.com request_id=6ffb0258-aa97-4d8e-8ab2-00684c35f3cc fwd="176.79.40.126" dyno=web.1 connect=1ms service=181ms status=200 bytes=2389
+2017-02-21T22:30:44.380365+00:00 heroku[router]: at=info method=GET path="/recipes/" host=tripmeal.herokuapp.com request_id=6d4f45a3-0a60-4f67-b10f-66e8fd872332 fwd="176.79.40.126" dyno=web.1 connect=1ms service=209ms status=200 bytes=2294
+2017-02-21T22:30:47.019257+00:00 heroku[router]: at=info method=GET path="/recipe/?rid=2" host=tripmeal.herokuapp.com request_id=b3cb98c9-07b1-4c43-92ef-85095f97b145 fwd="176.79.40.126" dyno=web.1 connect=0ms service=152ms status=200 bytes=2615
+2017-02-21T22:30:48.810543+00:00 heroku[router]: at=info method=GET path="/recipe?rid=2&fav=true" host=tripmeal.herokuapp.com request_id=5e673c1a-f96b-41d2-85df-15564bac2a08 fwd="176.79.40.126" dyno=web.1 connect=0ms service=111ms status=200 bytes=2615
+2017-02-21T22:30:51.062935+00:00 heroku[router]: at=info method=GET path="/recipes/" host=tripmeal.herokuapp.com request_id=b2b518d1-eeb8-4f5f-927f-ea8f726f0cf3 fwd="176.79.40.126" dyno=web.1 connect=0ms service=36ms status=200 bytes=2294
+2017-02-21T22:30:53.778837+00:00 heroku[router]: at=info method=GET path="/recipe?rid=22" host=tripmeal.herokuapp.com request_id=e0501fb4-2cb6-4e52-a743-d0cbb192c60b fwd="176.79.40.126" dyno=web.1 connect=0ms service=157ms status=200 bytes=2995
+2017-02-21T22:30:55.812634+00:00 heroku[router]: at=info method=GET path="/recipe?rid=22&fav=true" host=tripmeal.herokuapp.com request_id=8239568b-07e5-4a1d-a450-ac51ca7dd70f fwd="176.79.40.126" dyno=web.1 connect=0ms service=128ms status=200 bytes=2995
+2017-02-21T22:31:00.409585+00:00 heroku[router]: at=info method=GET path="/favourites/" host=tripmeal.herokuapp.com request_id=85e03020-db8d-40b5-a56f-0c61e7d8e181 fwd="176.79.40.126" dyno=web.1 connect=1ms service=329ms status=200 bytes=2542
+2017-02-21T22:31:06.232866+00:00 heroku[router]: at=info method=GET path="/logout/" host=tripmeal.herokuapp.com request_id=650bbba2-3f31-4f88-a63e-51a216d66b6b fwd="176.79.40.126" dyno=web.1 connect=2ms service=15ms status=302 bytes=574
+2017-02-21T22:31:06.393001+00:00 heroku[router]: at=info method=GET path="/" host=tripmeal.herokuapp.com request_id=45adfdde-439d-4d6a-af33-d37e143e6d44 fwd="176.79.40.126" dyno=web.1 connect=0ms service=20ms status=200 bytes=2241
+2017-02-21T22:31:09.253062+00:00 heroku[router]: at=info method=GET path="/login/" host=tripmeal.herokuapp.com request_id=08a21368-b109-4c0b-bd53-3f03533f6896 fwd="176.79.40.126" dyno=web.1 connect=0ms service=116ms status=200 bytes=2300
+2017-02-21T22:31:13.616441+00:00 heroku[router]: at=info method=POST path="/login/" host=tripmeal.herokuapp.com request_id=bbe38030-8a90-4555-ae68-7a49edcf90f5 fwd="176.79.40.126" dyno=web.1 connect=0ms service=1820ms status=302 bytes=715
+2017-02-21T22:31:14.081920+00:00 heroku[router]: at=info method=GET path="/favourites/" host=tripmeal.herokuapp.com request_id=6d2aade0-9065-47d0-98f2-4606a4cc703e fwd="176.79.40.126" dyno=web.1 connect=0ms service=289ms status=200 bytes=2974
+2017-02-21T22:31:19.373430+00:00 heroku[router]: at=info method=GET path="/recipe?rid=12&fav=true" host=tripmeal.herokuapp.com request_id=669fb1eb-4944-4b2f-891f-9b650b423768 fwd="176.79.40.126" dyno=web.1 connect=0ms service=185ms status=200 bytes=3373
+2017-02-21T22:31:22.180309+00:00 heroku[router]: at=info method=GET path="/recipe?rid=12&fav=false" host=tripmeal.herokuapp.com request_id=08305c47-8d33-416d-b950-ccda9e0978a3 fwd="176.79.40.126" dyno=web.1 connect=0ms service=475ms status=200 bytes=3373
+2017-02-21T22:31:24.241379+00:00 heroku[router]: at=info method=GET path="/recipes/" host=tripmeal.herokuapp.com request_id=60ad5e16-2b18-49f9-b302-7bea0364773c fwd="176.79.40.126" dyno=web.1 connect=0ms service=251ms status=200 bytes=2296
+2017-02-21T22:31:27.362168+00:00 heroku[router]: at=info method=GET path="/recipe?rid=42" host=tripmeal.herokuapp.com request_id=e79b0036-5411-43f2-8300-00ff2c0601dd fwd="176.79.40.126" dyno=web.1 connect=0ms service=347ms status=200 bytes=3067
+2017-02-21T22:31:29.766594+00:00 heroku[router]: at=info method=GET path="/recipe?rid=42&fav=true" host=tripmeal.herokuapp.com request_id=4fde7647-df88-4051-bede-7a1b35c0a712 fwd="176.79.40.126" dyno=web.1 connect=0ms service=255ms status=200 bytes=3067
+2017-02-21T22:31:31.856545+00:00 heroku[router]: at=info method=GET path="/favourites/" host=tripmeal.herokuapp.com request_id=7bdabce3-a681-4ff8-b1b7-997427cc64d2 fwd="176.79.40.126" dyno=web.1 connect=0ms service=192ms status=200 bytes=2544
+2017-02-21T22:31:54.827002+00:00 heroku[router]: at=info method=GET path="/" host=tripmeal.herokuapp.com request_id=a3a5507e-fa23-44fb-8a30-b82376ab466a fwd="89.155.126.200" dyno=web.1 connect=0ms service=3ms status=200 bytes=2241
+2017-02-21T22:34:18.874651+00:00 heroku[router]: at=info method=GET path="/" host=tripmeal.herokuapp.com request_id=5227d567-b4ad-4859-989a-8d50ea0e1790 fwd="176.79.40.126" dyno=web.1 connect=0ms service=12ms status=200 bytes=2366
+2017-02-21T22:36:53.662216+00:00 heroku[router]: at=info method=GET path="/recipes/" host=tripmeal.herokuapp.com request_id=8a262477-02d0-4287-b5ad-970fe2a65d2d fwd="93.166.141.247" dyno=web.1 connect=1ms service=210ms status=200 bytes=2296
+2017-02-21T22:36:56.401958+00:00 heroku[router]: at=info method=GET path="/recipe?rid=22" host=tripmeal.herokuapp.com request_id=7f2a1e43-15cd-4efc-8da9-933a24253bd7 fwd="93.166.141.247" dyno=web.1 connect=1ms service=89ms status=200 bytes=2997
+2017-02-21T22:39:08.417984+00:00 heroku[router]: at=info method=GET path="/" host=tripmeal.herokuapp.com request_id=b46a6c84-7108-4547-a44d-746d69c14576 fwd="78.137.212.183" dyno=web.1 connect=0ms service=5ms status=200 bytes=2241
+2017-02-21T22:43:02.827655+00:00 heroku[router]: at=info method=GET path="/" host=tripmeal.herokuapp.com request_id=e794e9e5-3aa4-4842-828d-cd90398c0489 fwd="176.79.40.126" dyno=web.1 connect=1ms service=6ms status=200 bytes=2366
+2017-02-21T22:43:03.908672+00:00 heroku[router]: at=info method=GET path="/" host=tripmeal.herokuapp.com request_id=b9cc3311-13c8-49e0-beab-0116056a4da8 fwd="176.79.40.126" dyno=web.1 connect=1ms service=5ms status=200 bytes=2366
+2017-02-21T22:48:46.768495+00:00 heroku[web.1]: Restarting
+2017-02-21T22:48:46.769299+00:00 heroku[web.1]: State changed from up to starting
+2017-02-21T22:48:47.602453+00:00 heroku[web.1]: Stopping all processes with SIGTERM
+2017-02-21T22:48:47.619298+00:00 app[web.1]: [2017-02-21 22:48:47 +0000] [10] [INFO] Worker exiting (pid: 10)
+2017-02-21T22:48:47.620728+00:00 app[web.1]: [2017-02-21 22:48:47 +0000] [9] [INFO] Worker exiting (pid: 9)
+2017-02-21T22:48:47.658021+00:00 app[web.1]: [2017-02-21 22:48:47 +0000] [4] [INFO] Handling signal: term
+2017-02-21T22:48:47.665453+00:00 app[web.1]: [2017-02-21 22:48:47 +0000] [4] [INFO] Shutting down: Master
+2017-02-21T22:48:47.824584+00:00 heroku[web.1]: Process exited with status 0
+2017-02-21T22:48:50.554366+00:00 heroku[web.1]: Starting process with command `gunicorn app:app --log-file -`
+2017-02-21T22:48:53.380712+00:00 app[web.1]: [2017-02-21 22:48:53 +0000] [4] [INFO] Starting gunicorn 19.6.0
+2017-02-21T22:48:53.381370+00:00 app[web.1]: [2017-02-21 22:48:53 +0000] [4] [INFO] Listening at: http://0.0.0.0:16578 (4)
+2017-02-21T22:48:53.381513+00:00 app[web.1]: [2017-02-21 22:48:53 +0000] [4] [INFO] Using worker: sync
+2017-02-21T22:48:53.387410+00:00 app[web.1]: [2017-02-21 22:48:53 +0000] [9] [INFO] Booting worker with pid: 9
+2017-02-21T22:48:53.427631+00:00 app[web.1]: [2017-02-21 22:48:53 +0000] [10] [INFO] Booting worker with pid: 10
+2017-02-21T22:48:54.161432+00:00 heroku[web.1]: State changed from starting to up
+2017-02-21T22:20:14.832564+00:00 heroku[router]: at=info method=GET path="/login/" host=tripmeal.herokuapp.com request_id=0b29bd23-2bb6-48d1-a232-2096852468ab fwd="93.166.141.247" dyno=web.1 connect=0ms service=22ms status=200 bytes=2300
+2017-02-21T22:21:10.128053+00:00 heroku[router]: at=info method=GET path="/recipes/" host=tripmeal.herokuapp.com request_id=c87b0372-cac8-4320-b778-670606bf8962 fwd="176.79.40.126" dyno=web.1 connect=1ms service=38ms status=200 bytes=2294
+2017-02-21T22:21:13.217859+00:00 heroku[router]: at=info method=GET path="/recipe?rid=42" host=tripmeal.herokuapp.com request_id=94a6d747-f0d7-452b-bfe1-beffd134aad9 fwd="176.79.40.126" dyno=web.1 connect=1ms service=37ms status=200 bytes=3065
+2017-02-21T22:21:15.411890+00:00 heroku[router]: at=info method=GET path="/recipe?rid=42&fav=true" host=tripmeal.herokuapp.com request_id=1b8aa337-a690-40e6-a991-39ed7c2393a8 fwd="176.79.40.126" dyno=web.1 connect=1ms service=156ms status=200 bytes=3065
+2017-02-21T22:21:21.598733+00:00 heroku[router]: at=info method=GET path="/recipe?rid=42&fav=false" host=tripmeal.herokuapp.com request_id=20e25257-0cc2-490b-a45c-a469d25e2ced fwd="176.79.40.126" dyno=web.1 connect=1ms service=94ms status=200 bytes=3065
+2017-02-21T22:21:37.644326+00:00 heroku[router]: at=info method=GET path="/" host=tripmeal.herokuapp.com request_id=b19ce5c6-93c2-4861-b45a-7b2314fe6384 fwd="5.172.237.14" dyno=web.1 connect=0ms service=2ms status=200 bytes=2241
+2017-02-21T22:21:44.864118+00:00 heroku[router]: at=info method=GET path="/favicon.ico" host=tripmeal.herokuapp.com request_id=cc33dfbe-6895-4f60-9d0b-d8d79acfc98d fwd="5.172.237.14" dyno=web.1 connect=0ms service=1ms status=404 bytes=386
+2017-02-21T22:22:08.217135+00:00 heroku[router]: at=info method=GET path="/register/" host=tripmeal.herokuapp.com request_id=a376413b-3271-4dbb-b81b-c5249700be4a fwd="93.166.141.247" dyno=web.1 connect=1ms service=5ms status=200 bytes=2774
+2017-02-21T22:22:11.925865+00:00 heroku[router]: at=info method=GET path="/recipe?rid=42&fav=true" host=tripmeal.herokuapp.com request_id=cbe26988-3fdd-422f-9dcc-3399d39815a5 fwd="176.79.40.126" dyno=web.1 connect=1ms service=109ms status=200 bytes=3065
+2017-02-21T22:22:27.585292+00:00 heroku[router]: at=info method=GET path="/recipes/" host=tripmeal.herokuapp.com request_id=a40074bf-5bf1-460f-8bdb-e6d9ce833acc fwd="5.172.237.14" dyno=web.1 connect=0ms service=33ms status=200 bytes=2171
+2017-02-21T22:22:32.219651+00:00 heroku[router]: at=info method=GET path="/recipe?rid=2" host=tripmeal.herokuapp.com request_id=6db3abc9-8f0f-4cfd-80cc-e66a23a5eaac fwd="5.172.237.14" dyno=web.1 connect=0ms service=28ms status=200 bytes=2364
+2017-02-21T22:22:35.281817+00:00 heroku[router]: at=info method=POST path="/register/" host=tripmeal.herokuapp.com request_id=08ffba20-130f-4d1e-824a-10cfa87261fe fwd="93.166.141.247" dyno=web.1 connect=1ms service=656ms status=302 bytes=652
+2017-02-21T22:22:35.427206+00:00 heroku[router]: at=info method=GET path="/" host=tripmeal.herokuapp.com request_id=10711cdd-509a-44fb-a94c-9e297a6d7d7e fwd="93.166.141.247" dyno=web.1 connect=1ms service=5ms status=200 bytes=2734
+2017-02-21T22:22:38.125560+00:00 heroku[router]: at=info method=GET path="/recipe?rid=12" host=tripmeal.herokuapp.com request_id=6e264a3d-5da9-4f6c-a93c-731b32fad133 fwd="5.172.237.14" dyno=web.1 connect=0ms service=32ms status=200 bytes=3119
+2017-02-21T22:22:43.802097+00:00 heroku[router]: at=info method=GET path="/recipe?rid=22" host=tripmeal.herokuapp.com request_id=38d9cf32-62f9-4aaf-a1b1-f769fa9bcb1b fwd="5.172.237.14" dyno=web.1 connect=0ms service=20ms status=200 bytes=2743
+2017-02-21T22:22:48.385382+00:00 heroku[router]: at=info method=GET path="/recipe?rid=42" host=tripmeal.herokuapp.com request_id=619c0e64-b92a-41e8-bb38-cd4b69cc1bc5 fwd="5.172.237.14" dyno=web.1 connect=0ms service=23ms status=200 bytes=2813
+2017-02-21T22:22:58.186359+00:00 heroku[router]: at=info method=GET path="/menu/" host=tripmeal.herokuapp.com request_id=af5e1f61-8e94-4a79-a48e-1e4b56b08109 fwd="5.172.237.14" dyno=web.1 connect=0ms service=604ms status=200 bytes=2350
+2017-02-21T22:28:44.070921+00:00 heroku[router]: at=info method=GET path="/" host=tripmeal.herokuapp.com request_id=d639e8be-efe7-4ce3-9afc-3d3cc01efb81 fwd="84.238.89.251" dyno=web.1 connect=1ms service=2ms status=200 bytes=2241
+2017-02-21T22:30:23.664396+00:00 heroku[web.1]: Restarting
+2017-02-21T22:30:23.665467+00:00 heroku[web.1]: State changed from up to starting
+2017-02-21T22:30:24.376323+00:00 app[web.1]: [2017-02-21 22:30:24 +0000] [10] [INFO] Worker exiting (pid: 10)
+2017-02-21T22:30:24.381081+00:00 app[web.1]: [2017-02-21 22:30:24 +0000] [4] [INFO] Handling signal: term
+2017-02-21T22:30:24.386281+00:00 app[web.1]: [2017-02-21 22:30:24 +0000] [9] [INFO] Worker exiting (pid: 9)
+2017-02-21T22:30:24.429944+00:00 app[web.1]: [2017-02-21 22:30:24 +0000] [4] [INFO] Shutting down: Master
+2017-02-21T22:30:24.363192+00:00 heroku[web.1]: Stopping all processes with SIGTERM
+2017-02-21T22:30:24.561063+00:00 heroku[web.1]: Process exited with status 0
+2017-02-21T22:30:27.376460+00:00 heroku[web.1]: Starting process with command `gunicorn app:app --log-file -`
+2017-02-21T22:30:31.143686+00:00 heroku[web.1]: State changed from starting to up
+2017-02-21T22:30:31.081097+00:00 app[web.1]: [2017-02-21 22:30:31 +0000] [4] [INFO] Starting gunicorn 19.6.0
+2017-02-21T22:30:31.083387+00:00 app[web.1]: [2017-02-21 22:30:31 +0000] [4] [INFO] Listening at: http://0.0.0.0:52824 (4)
+2017-02-21T22:30:31.083902+00:00 app[web.1]: [2017-02-21 22:30:31 +0000] [4] [INFO] Using worker: sync
+2017-02-21T22:30:31.105706+00:00 app[web.1]: [2017-02-21 22:30:31 +0000] [9] [INFO] Booting worker with pid: 9
+2017-02-21T22:30:31.160071+00:00 app[web.1]: [2017-02-21 22:30:31 +0000] [10] [INFO] Booting worker with pid: 10
+2017-02-21T22:30:35.613805+00:00 heroku[router]: at=info method=GET path="/favourites/" host=tripmeal.herokuapp.com request_id=6ffb0258-aa97-4d8e-8ab2-00684c35f3cc fwd="176.79.40.126" dyno=web.1 connect=1ms service=181ms status=200 bytes=2389
+2017-02-21T22:30:44.380365+00:00 heroku[router]: at=info method=GET path="/recipes/" host=tripmeal.herokuapp.com request_id=6d4f45a3-0a60-4f67-b10f-66e8fd872332 fwd="176.79.40.126" dyno=web.1 connect=1ms service=209ms status=200 bytes=2294
+2017-02-21T22:30:47.019257+00:00 heroku[router]: at=info method=GET path="/recipe/?rid=2" host=tripmeal.herokuapp.com request_id=b3cb98c9-07b1-4c43-92ef-85095f97b145 fwd="176.79.40.126" dyno=web.1 connect=0ms service=152ms status=200 bytes=2615
+2017-02-21T22:30:48.810543+00:00 heroku[router]: at=info method=GET path="/recipe?rid=2&fav=true" host=tripmeal.herokuapp.com request_id=5e673c1a-f96b-41d2-85df-15564bac2a08 fwd="176.79.40.126" dyno=web.1 connect=0ms service=111ms status=200 bytes=2615
+2017-02-21T22:30:51.062935+00:00 heroku[router]: at=info method=GET path="/recipes/" host=tripmeal.herokuapp.com request_id=b2b518d1-eeb8-4f5f-927f-ea8f726f0cf3 fwd="176.79.40.126" dyno=web.1 connect=0ms service=36ms status=200 bytes=2294
+2017-02-21T22:30:53.778837+00:00 heroku[router]: at=info method=GET path="/recipe?rid=22" host=tripmeal.herokuapp.com request_id=e0501fb4-2cb6-4e52-a743-d0cbb192c60b fwd="176.79.40.126" dyno=web.1 connect=0ms service=157ms status=200 bytes=2995
+2017-02-21T22:30:55.812634+00:00 heroku[router]: at=info method=GET path="/recipe?rid=22&fav=true" host=tripmeal.herokuapp.com request_id=8239568b-07e5-4a1d-a450-ac51ca7dd70f fwd="176.79.40.126" dyno=web.1 connect=0ms service=128ms status=200 bytes=2995
+2017-02-21T22:31:00.409585+00:00 heroku[router]: at=info method=GET path="/favourites/" host=tripmeal.herokuapp.com request_id=85e03020-db8d-40b5-a56f-0c61e7d8e181 fwd="176.79.40.126" dyno=web.1 connect=1ms service=329ms status=200 bytes=2542
+2017-02-21T22:31:06.232866+00:00 heroku[router]: at=info method=GET path="/logout/" host=tripmeal.herokuapp.com request_id=650bbba2-3f31-4f88-a63e-51a216d66b6b fwd="176.79.40.126" dyno=web.1 connect=2ms service=15ms status=302 bytes=574
+2017-02-21T22:31:06.393001+00:00 heroku[router]: at=info method=GET path="/" host=tripmeal.herokuapp.com request_id=45adfdde-439d-4d6a-af33-d37e143e6d44 fwd="176.79.40.126" dyno=web.1 connect=0ms service=20ms status=200 bytes=2241
+2017-02-21T22:31:09.253062+00:00 heroku[router]: at=info method=GET path="/login/" host=tripmeal.herokuapp.com request_id=08a21368-b109-4c0b-bd53-3f03533f6896 fwd="176.79.40.126" dyno=web.1 connect=0ms service=116ms status=200 bytes=2300
+2017-02-21T22:31:13.616441+00:00 heroku[router]: at=info method=POST path="/login/" host=tripmeal.herokuapp.com request_id=bbe38030-8a90-4555-ae68-7a49edcf90f5 fwd="176.79.40.126" dyno=web.1 connect=0ms service=1820ms status=302 bytes=715
+2017-02-21T22:31:14.081920+00:00 heroku[router]: at=info method=GET path="/favourites/" host=tripmeal.herokuapp.com request_id=6d2aade0-9065-47d0-98f2-4606a4cc703e fwd="176.79.40.126" dyno=web.1 connect=0ms service=289ms status=200 bytes=2974
+2017-02-21T22:31:19.373430+00:00 heroku[router]: at=info method=GET path="/recipe?rid=12&fav=true" host=tripmeal.herokuapp.com request_id=669fb1eb-4944-4b2f-891f-9b650b423768 fwd="176.79.40.126" dyno=web.1 connect=0ms service=185ms status=200 bytes=3373
+2017-02-21T22:31:22.180309+00:00 heroku[router]: at=info method=GET path="/recipe?rid=12&fav=false" host=tripmeal.herokuapp.com request_id=08305c47-8d33-416d-b950-ccda9e0978a3 fwd="176.79.40.126" dyno=web.1 connect=0ms service=475ms status=200 bytes=3373
+2017-02-21T22:31:24.241379+00:00 heroku[router]: at=info method=GET path="/recipes/" host=tripmeal.herokuapp.com request_id=60ad5e16-2b18-49f9-b302-7bea0364773c fwd="176.79.40.126" dyno=web.1 connect=0ms service=251ms status=200 bytes=2296
+2017-02-21T22:31:27.362168+00:00 heroku[router]: at=info method=GET path="/recipe?rid=42" host=tripmeal.herokuapp.com request_id=e79b0036-5411-43f2-8300-00ff2c0601dd fwd="176.79.40.126" dyno=web.1 connect=0ms service=347ms status=200 bytes=3067
+2017-02-21T22:31:29.766594+00:00 heroku[router]: at=info method=GET path="/recipe?rid=42&fav=true" host=tripmeal.herokuapp.com request_id=4fde7647-df88-4051-bede-7a1b35c0a712 fwd="176.79.40.126" dyno=web.1 connect=0ms service=255ms status=200 bytes=3067
+2017-02-21T22:31:31.856545+00:00 heroku[router]: at=info method=GET path="/favourites/" host=tripmeal.herokuapp.com request_id=7bdabce3-a681-4ff8-b1b7-997427cc64d2 fwd="176.79.40.126" dyno=web.1 connect=0ms service=192ms status=200 bytes=2544
+2017-02-21T22:31:54.827002+00:00 heroku[router]: at=info method=GET path="/" host=tripmeal.herokuapp.com request_id=a3a5507e-fa23-44fb-8a30-b82376ab466a fwd="89.155.126.200" dyno=web.1 connect=0ms service=3ms status=200 bytes=2241
+2017-02-21T22:34:18.874651+00:00 heroku[router]: at=info method=GET path="/" host=tripmeal.herokuapp.com request_id=5227d567-b4ad-4859-989a-8d50ea0e1790 fwd="176.79.40.126" dyno=web.1 connect=0ms service=12ms status=200 bytes=2366
+2017-02-21T22:36:53.662216+00:00 heroku[router]: at=info method=GET path="/recipes/" host=tripmeal.herokuapp.com request_id=8a262477-02d0-4287-b5ad-970fe2a65d2d fwd="93.166.141.247" dyno=web.1 connect=1ms service=210ms status=200 bytes=2296
+2017-02-21T22:36:56.401958+00:00 heroku[router]: at=info method=GET path="/recipe?rid=22" host=tripmeal.herokuapp.com request_id=7f2a1e43-15cd-4efc-8da9-933a24253bd7 fwd="93.166.141.247" dyno=web.1 connect=1ms service=89ms status=200 bytes=2997
+2017-02-21T22:39:08.417984+00:00 heroku[router]: at=info method=GET path="/" host=tripmeal.herokuapp.com request_id=b46a6c84-7108-4547-a44d-746d69c14576 fwd="78.137.212.183" dyno=web.1 connect=0ms service=5ms status=200 bytes=2241
+2017-02-21T22:43:02.827655+00:00 heroku[router]: at=info method=GET path="/" host=tripmeal.herokuapp.com request_id=e794e9e5-3aa4-4842-828d-cd90398c0489 fwd="176.79.40.126" dyno=web.1 connect=1ms service=6ms status=200 bytes=2366
+2017-02-21T22:43:03.908672+00:00 heroku[router]: at=info method=GET path="/" host=tripmeal.herokuapp.com request_id=b9cc3311-13c8-49e0-beab-0116056a4da8 fwd="176.79.40.126" dyno=web.1 connect=1ms service=5ms status=200 bytes=2366
+2017-02-21T22:48:46.768495+00:00 heroku[web.1]: Restarting
+2017-02-21T22:48:46.769299+00:00 heroku[web.1]: State changed from up to starting
+2017-02-21T22:48:47.602453+00:00 heroku[web.1]: Stopping all processes with SIGTERM
+2017-02-21T22:48:47.619298+00:00 app[web.1]: [2017-02-21 22:48:47 +0000] [10] [INFO] Worker exiting (pid: 10)
+2017-02-21T22:48:47.620728+00:00 app[web.1]: [2017-02-21 22:48:47 +0000] [9] [INFO] Worker exiting (pid: 9)
+2017-02-21T22:48:47.658021+00:00 app[web.1]: [2017-02-21 22:48:47 +0000] [4] [INFO] Handling signal: term
+2017-02-21T22:48:47.665453+00:00 app[web.1]: [2017-02-21 22:48:47 +0000] [4] [INFO] Shutting down: Master
+2017-02-21T22:48:47.824584+00:00 heroku[web.1]: Process exited with status 0
+2017-02-21T22:48:50.554366+00:00 heroku[web.1]: Starting process with command `gunicorn app:app --log-file -`
+2017-02-21T22:48:53.380712+00:00 app[web.1]: [2017-02-21 22:48:53 +0000] [4] [INFO] Starting gunicorn 19.6.0
+2017-02-21T22:48:53.381370+00:00 app[web.1]: [2017-02-21 22:48:53 +0000] [4] [INFO] Listening at: http://0.0.0.0:16578 (4)
+2017-02-21T22:48:53.381513+00:00 app[web.1]: [2017-02-21 22:48:53 +0000] [4] [INFO] Using worker: sync
+2017-02-21T22:48:53.387410+00:00 app[web.1]: [2017-02-21 22:48:53 +0000] [9] [INFO] Booting worker with pid: 9
+2017-02-21T22:48:53.427631+00:00 app[web.1]: [2017-02-21 22:48:53 +0000] [10] [INFO] Booting worker with pid: 10
+2017-02-21T22:48:54.161432+00:00 heroku[web.1]: State changed from starting to up
+2017-02-21T23:22:14.547889+00:00 heroku[web.1]: Idling
+2017-02-21T23:22:14.547889+00:00 heroku[web.1]: State changed from up to down
+2017-02-21T23:22:14.970042+00:00 app[web.1]: [2017-02-21 23:22:14 +0000] [9] [INFO] Worker exiting (pid: 9)
+2017-02-21T23:22:14.970147+00:00 app[web.1]: [2017-02-21 23:22:14 +0000] [10] [INFO] Worker exiting (pid: 10)
+2017-02-21T23:22:14.970255+00:00 app[web.1]: [2017-02-21 23:22:14 +0000] [4] [INFO] Handling signal: term
+2017-02-21T23:22:14.972975+00:00 app[web.1]: [2017-02-21 23:22:14 +0000] [4] [INFO] Shutting down: Master
+2017-02-21T23:22:14.964518+00:00 heroku[web.1]: Stopping all processes with SIGTERM
+2017-02-21T23:22:15.109612+00:00 heroku[web.1]: Process exited with status 0
+2017-02-21T23:25:40.222623+00:00 heroku[web.1]: Unidling
+2017-02-21T23:25:40.222910+00:00 heroku[web.1]: State changed from down to starting
+2017-02-21T23:25:43.631277+00:00 heroku[web.1]: Starting process with command `gunicorn app:app --log-file -`
+2017-02-21T23:25:46.796735+00:00 app[web.1]: [2017-02-21 23:25:46 +0000] [4] [INFO] Starting gunicorn 19.6.0
+2017-02-21T23:25:46.797567+00:00 app[web.1]: [2017-02-21 23:25:46 +0000] [4] [INFO] Listening at: http://0.0.0.0:52946 (4)
+2017-02-21T23:25:46.797766+00:00 app[web.1]: [2017-02-21 23:25:46 +0000] [4] [INFO] Using worker: sync
+2017-02-21T23:25:46.804417+00:00 app[web.1]: [2017-02-21 23:25:46 +0000] [9] [INFO] Booting worker with pid: 9
+2017-02-21T23:25:46.811314+00:00 app[web.1]: [2017-02-21 23:25:46 +0000] [10] [INFO] Booting worker with pid: 10
+2017-02-21T23:25:47.392005+00:00 heroku[web.1]: State changed from starting to up
+2017-02-21T23:25:48.311911+00:00 heroku[router]: at=info method=GET path="/" host=tripmeal.herokuapp.com request_id=baa8c4c2-cc51-4cf1-9d6b-6f86da97c0c4 fwd="176.79.184.221" dyno=web.1 connect=1ms service=40ms status=200 bytes=2241
+2017-02-21T23:25:50.265780+00:00 heroku[router]: at=info method=GET path="/favicon.ico" host=tripmeal.herokuapp.com request_id=138d3fb6-a614-4f30-94b5-52562d7b6980 fwd="176.79.184.221" dyno=web.1 connect=1ms service=22ms status=404 bytes=386
+2017-02-21T23:30:55.910216+00:00 heroku[router]: at=info method=GET path="/" host=tripmeal.herokuapp.com request_id=a28c20c4-52c9-48a3-86c7-be00bac7867e fwd="212.10.89.115" dyno=web.1 connect=1ms service=23ms status=200 bytes=2241
+2017-02-21T23:31:52.268949+00:00 heroku[router]: at=info method=GET path="/recipes/" host=tripmeal.herokuapp.com request_id=2afdc9d8-e7f6-4149-88b3-b1d771f25b40 fwd="176.79.184.221" dyno=web.1 connect=1ms service=64ms status=200 bytes=2171
+2017-02-21T23:32:00.150513+00:00 heroku[router]: at=info method=GET path="/recipe?rid=42" host=tripmeal.herokuapp.com request_id=2df7245f-4635-495a-b277-0e89bdb6bb13 fwd="176.79.184.221" dyno=web.1 connect=2ms service=38ms status=200 bytes=2813
+2017-02-21T23:33:16.731916+00:00 heroku[router]: at=info method=GET path="/recipes/" host=tripmeal.herokuapp.com request_id=6a1160da-843f-4d0d-8221-c7746310d412 fwd="176.79.184.221" dyno=web.1 connect=1ms service=37ms status=200 bytes=2171
+2017-02-21T23:33:19.263331+00:00 heroku[router]: at=info method=GET path="/recipe?rid=2" host=tripmeal.herokuapp.com request_id=47767db0-8076-4c96-89a9-3961b51bb2a4 fwd="176.79.184.221" dyno=web.1 connect=1ms service=62ms status=200 bytes=2364
+2017-02-21T23:33:39.150088+00:00 heroku[router]: at=info method=GET path="/menu/" host=tripmeal.herokuapp.com request_id=8b87860f-edc9-4e36-b059-e1522b968765 fwd="176.79.184.221" dyno=web.1 connect=1ms service=206ms status=200 bytes=2342
+2017-02-21T23:33:43.144964+00:00 heroku[router]: at=info method=GET path="/recipes/" host=tripmeal.herokuapp.com request_id=91da135b-ff9c-434c-941e-97893d07a9a2 fwd="176.79.184.221" dyno=web.1 connect=1ms service=30ms status=200 bytes=2171
+2017-02-21T23:33:45.646909+00:00 heroku[router]: at=info method=GET path="/recipe?rid=12" host=tripmeal.herokuapp.com request_id=7c5a5df4-7013-4807-986e-c70c831dfb20 fwd="176.79.184.221" dyno=web.1 connect=0ms service=29ms status=200 bytes=3119
+2017-02-21T22:22:27.585292+00:00 heroku[router]: at=info method=GET path="/recipes/" host=tripmeal.herokuapp.com request_id=a40074bf-5bf1-460f-8bdb-e6d9ce833acc fwd="5.172.237.14" dyno=web.1 connect=0ms service=33ms status=200 bytes=2171
+2017-02-21T22:22:32.219651+00:00 heroku[router]: at=info method=GET path="/recipe?rid=2" host=tripmeal.herokuapp.com request_id=6db3abc9-8f0f-4cfd-80cc-e66a23a5eaac fwd="5.172.237.14" dyno=web.1 connect=0ms service=28ms status=200 bytes=2364
+2017-02-21T22:22:35.281817+00:00 heroku[router]: at=info method=POST path="/register/" host=tripmeal.herokuapp.com request_id=08ffba20-130f-4d1e-824a-10cfa87261fe fwd="93.166.141.247" dyno=web.1 connect=1ms service=656ms status=302 bytes=652
+2017-02-21T22:22:35.427206+00:00 heroku[router]: at=info method=GET path="/" host=tripmeal.herokuapp.com request_id=10711cdd-509a-44fb-a94c-9e297a6d7d7e fwd="93.166.141.247" dyno=web.1 connect=1ms service=5ms status=200 bytes=2734
+2017-02-21T22:22:38.125560+00:00 heroku[router]: at=info method=GET path="/recipe?rid=12" host=tripmeal.herokuapp.com request_id=6e264a3d-5da9-4f6c-a93c-731b32fad133 fwd="5.172.237.14" dyno=web.1 connect=0ms service=32ms status=200 bytes=3119
+2017-02-21T22:22:43.802097+00:00 heroku[router]: at=info method=GET path="/recipe?rid=22" host=tripmeal.herokuapp.com request_id=38d9cf32-62f9-4aaf-a1b1-f769fa9bcb1b fwd="5.172.237.14" dyno=web.1 connect=0ms service=20ms status=200 bytes=2743
+2017-02-21T22:22:48.385382+00:00 heroku[router]: at=info method=GET path="/recipe?rid=42" host=tripmeal.herokuapp.com request_id=619c0e64-b92a-41e8-bb38-cd4b69cc1bc5 fwd="5.172.237.14" dyno=web.1 connect=0ms service=23ms status=200 bytes=2813
+2017-02-21T22:22:58.186359+00:00 heroku[router]: at=info method=GET path="/menu/" host=tripmeal.herokuapp.com request_id=af5e1f61-8e94-4a79-a48e-1e4b56b08109 fwd="5.172.237.14" dyno=web.1 connect=0ms service=604ms status=200 bytes=2350
+2017-02-21T22:28:44.070921+00:00 heroku[router]: at=info method=GET path="/" host=tripmeal.herokuapp.com request_id=d639e8be-efe7-4ce3-9afc-3d3cc01efb81 fwd="84.238.89.251" dyno=web.1 connect=1ms service=2ms status=200 bytes=2241
+2017-02-21T22:30:23.664396+00:00 heroku[web.1]: Restarting
+2017-02-21T22:30:23.665467+00:00 heroku[web.1]: State changed from up to starting
+2017-02-21T22:30:24.376323+00:00 app[web.1]: [2017-02-21 22:30:24 +0000] [10] [INFO] Worker exiting (pid: 10)
+2017-02-21T22:30:24.381081+00:00 app[web.1]: [2017-02-21 22:30:24 +0000] [4] [INFO] Handling signal: term
+2017-02-21T22:30:24.386281+00:00 app[web.1]: [2017-02-21 22:30:24 +0000] [9] [INFO] Worker exiting (pid: 9)
+2017-02-21T22:30:24.429944+00:00 app[web.1]: [2017-02-21 22:30:24 +0000] [4] [INFO] Shutting down: Master
+2017-02-21T22:30:24.363192+00:00 heroku[web.1]: Stopping all processes with SIGTERM
+2017-02-21T22:30:24.561063+00:00 heroku[web.1]: Process exited with status 0
+2017-02-21T22:30:27.376460+00:00 heroku[web.1]: Starting process with command `gunicorn app:app --log-file -`
+2017-02-21T22:30:31.143686+00:00 heroku[web.1]: State changed from starting to up
+2017-02-21T22:30:31.081097+00:00 app[web.1]: [2017-02-21 22:30:31 +0000] [4] [INFO] Starting gunicorn 19.6.0
+2017-02-21T22:30:31.083387+00:00 app[web.1]: [2017-02-21 22:30:31 +0000] [4] [INFO] Listening at: http://0.0.0.0:52824 (4)
+2017-02-21T22:30:31.083902+00:00 app[web.1]: [2017-02-21 22:30:31 +0000] [4] [INFO] Using worker: sync
+2017-02-21T22:30:31.105706+00:00 app[web.1]: [2017-02-21 22:30:31 +0000] [9] [INFO] Booting worker with pid: 9
+2017-02-21T22:30:31.160071+00:00 app[web.1]: [2017-02-21 22:30:31 +0000] [10] [INFO] Booting worker with pid: 10
+2017-02-21T22:30:35.613805+00:00 heroku[router]: at=info method=GET path="/favourites/" host=tripmeal.herokuapp.com request_id=6ffb0258-aa97-4d8e-8ab2-00684c35f3cc fwd="176.79.40.126" dyno=web.1 connect=1ms service=181ms status=200 bytes=2389
+2017-02-21T22:30:44.380365+00:00 heroku[router]: at=info method=GET path="/recipes/" host=tripmeal.herokuapp.com request_id=6d4f45a3-0a60-4f67-b10f-66e8fd872332 fwd="176.79.40.126" dyno=web.1 connect=1ms service=209ms status=200 bytes=2294
+2017-02-21T22:30:47.019257+00:00 heroku[router]: at=info method=GET path="/recipe/?rid=2" host=tripmeal.herokuapp.com request_id=b3cb98c9-07b1-4c43-92ef-85095f97b145 fwd="176.79.40.126" dyno=web.1 connect=0ms service=152ms status=200 bytes=2615
+2017-02-21T22:30:48.810543+00:00 heroku[router]: at=info method=GET path="/recipe?rid=2&fav=true" host=tripmeal.herokuapp.com request_id=5e673c1a-f96b-41d2-85df-15564bac2a08 fwd="176.79.40.126" dyno=web.1 connect=0ms service=111ms status=200 bytes=2615
+2017-02-21T22:30:51.062935+00:00 heroku[router]: at=info method=GET path="/recipes/" host=tripmeal.herokuapp.com request_id=b2b518d1-eeb8-4f5f-927f-ea8f726f0cf3 fwd="176.79.40.126" dyno=web.1 connect=0ms service=36ms status=200 bytes=2294
+2017-02-21T22:30:53.778837+00:00 heroku[router]: at=info method=GET path="/recipe?rid=22" host=tripmeal.herokuapp.com request_id=e0501fb4-2cb6-4e52-a743-d0cbb192c60b fwd="176.79.40.126" dyno=web.1 connect=0ms service=157ms status=200 bytes=2995
+2017-02-21T22:30:55.812634+00:00 heroku[router]: at=info method=GET path="/recipe?rid=22&fav=true" host=tripmeal.herokuapp.com request_id=8239568b-07e5-4a1d-a450-ac51ca7dd70f fwd="176.79.40.126" dyno=web.1 connect=0ms service=128ms status=200 bytes=2995
+2017-02-21T22:31:00.409585+00:00 heroku[router]: at=info method=GET path="/favourites/" host=tripmeal.herokuapp.com request_id=85e03020-db8d-40b5-a56f-0c61e7d8e181 fwd="176.79.40.126" dyno=web.1 connect=1ms service=329ms status=200 bytes=2542
+2017-02-21T22:31:06.232866+00:00 heroku[router]: at=info method=GET path="/logout/" host=tripmeal.herokuapp.com request_id=650bbba2-3f31-4f88-a63e-51a216d66b6b fwd="176.79.40.126" dyno=web.1 connect=2ms service=15ms status=302 bytes=574
+2017-02-21T22:31:06.393001+00:00 heroku[router]: at=info method=GET path="/" host=tripmeal.herokuapp.com request_id=45adfdde-439d-4d6a-af33-d37e143e6d44 fwd="176.79.40.126" dyno=web.1 connect=0ms service=20ms status=200 bytes=2241
+2017-02-21T22:31:09.253062+00:00 heroku[router]: at=info method=GET path="/login/" host=tripmeal.herokuapp.com request_id=08a21368-b109-4c0b-bd53-3f03533f6896 fwd="176.79.40.126" dyno=web.1 connect=0ms service=116ms status=200 bytes=2300
+2017-02-21T22:31:13.616441+00:00 heroku[router]: at=info method=POST path="/login/" host=tripmeal.herokuapp.com request_id=bbe38030-8a90-4555-ae68-7a49edcf90f5 fwd="176.79.40.126" dyno=web.1 connect=0ms service=1820ms status=302 bytes=715
+2017-02-21T22:31:14.081920+00:00 heroku[router]: at=info method=GET path="/favourites/" host=tripmeal.herokuapp.com request_id=6d2aade0-9065-47d0-98f2-4606a4cc703e fwd="176.79.40.126" dyno=web.1 connect=0ms service=289ms status=200 bytes=2974
+2017-02-21T22:31:19.373430+00:00 heroku[router]: at=info method=GET path="/recipe?rid=12&fav=true" host=tripmeal.herokuapp.com request_id=669fb1eb-4944-4b2f-891f-9b650b423768 fwd="176.79.40.126" dyno=web.1 connect=0ms service=185ms status=200 bytes=3373
+2017-02-21T22:31:22.180309+00:00 heroku[router]: at=info method=GET path="/recipe?rid=12&fav=false" host=tripmeal.herokuapp.com request_id=08305c47-8d33-416d-b950-ccda9e0978a3 fwd="176.79.40.126" dyno=web.1 connect=0ms service=475ms status=200 bytes=3373
+2017-02-21T22:31:24.241379+00:00 heroku[router]: at=info method=GET path="/recipes/" host=tripmeal.herokuapp.com request_id=60ad5e16-2b18-49f9-b302-7bea0364773c fwd="176.79.40.126" dyno=web.1 connect=0ms service=251ms status=200 bytes=2296
+2017-02-21T22:31:27.362168+00:00 heroku[router]: at=info method=GET path="/recipe?rid=42" host=tripmeal.herokuapp.com request_id=e79b0036-5411-43f2-8300-00ff2c0601dd fwd="176.79.40.126" dyno=web.1 connect=0ms service=347ms status=200 bytes=3067
+2017-02-21T22:31:29.766594+00:00 heroku[router]: at=info method=GET path="/recipe?rid=42&fav=true" host=tripmeal.herokuapp.com request_id=4fde7647-df88-4051-bede-7a1b35c0a712 fwd="176.79.40.126" dyno=web.1 connect=0ms service=255ms status=200 bytes=3067
+2017-02-21T22:31:31.856545+00:00 heroku[router]: at=info method=GET path="/favourites/" host=tripmeal.herokuapp.com request_id=7bdabce3-a681-4ff8-b1b7-997427cc64d2 fwd="176.79.40.126" dyno=web.1 connect=0ms service=192ms status=200 bytes=2544
+2017-02-21T22:31:54.827002+00:00 heroku[router]: at=info method=GET path="/" host=tripmeal.herokuapp.com request_id=a3a5507e-fa23-44fb-8a30-b82376ab466a fwd="89.155.126.200" dyno=web.1 connect=0ms service=3ms status=200 bytes=2241
+2017-02-21T22:34:18.874651+00:00 heroku[router]: at=info method=GET path="/" host=tripmeal.herokuapp.com request_id=5227d567-b4ad-4859-989a-8d50ea0e1790 fwd="176.79.40.126" dyno=web.1 connect=0ms service=12ms status=200 bytes=2366
+2017-02-21T22:36:53.662216+00:00 heroku[router]: at=info method=GET path="/recipes/" host=tripmeal.herokuapp.com request_id=8a262477-02d0-4287-b5ad-970fe2a65d2d fwd="93.166.141.247" dyno=web.1 connect=1ms service=210ms status=200 bytes=2296
+2017-02-21T22:36:56.401958+00:00 heroku[router]: at=info method=GET path="/recipe?rid=22" host=tripmeal.herokuapp.com request_id=7f2a1e43-15cd-4efc-8da9-933a24253bd7 fwd="93.166.141.247" dyno=web.1 connect=1ms service=89ms status=200 bytes=2997
+2017-02-21T22:39:08.417984+00:00 heroku[router]: at=info method=GET path="/" host=tripmeal.herokuapp.com request_id=b46a6c84-7108-4547-a44d-746d69c14576 fwd="78.137.212.183" dyno=web.1 connect=0ms service=5ms status=200 bytes=2241
+2017-02-21T22:43:02.827655+00:00 heroku[router]: at=info method=GET path="/" host=tripmeal.herokuapp.com request_id=e794e9e5-3aa4-4842-828d-cd90398c0489 fwd="176.79.40.126" dyno=web.1 connect=1ms service=6ms status=200 bytes=2366
+2017-02-21T22:43:03.908672+00:00 heroku[router]: at=info method=GET path="/" host=tripmeal.herokuapp.com request_id=b9cc3311-13c8-49e0-beab-0116056a4da8 fwd="176.79.40.126" dyno=web.1 connect=1ms service=5ms status=200 bytes=2366
+2017-02-21T22:48:46.768495+00:00 heroku[web.1]: Restarting
+2017-02-21T22:48:46.769299+00:00 heroku[web.1]: State changed from up to starting
+2017-02-21T22:48:47.602453+00:00 heroku[web.1]: Stopping all processes with SIGTERM
+2017-02-21T22:48:47.619298+00:00 app[web.1]: [2017-02-21 22:48:47 +0000] [10] [INFO] Worker exiting (pid: 10)
+2017-02-21T22:48:47.620728+00:00 app[web.1]: [2017-02-21 22:48:47 +0000] [9] [INFO] Worker exiting (pid: 9)
+2017-02-21T22:48:47.658021+00:00 app[web.1]: [2017-02-21 22:48:47 +0000] [4] [INFO] Handling signal: term
+2017-02-21T22:48:47.665453+00:00 app[web.1]: [2017-02-21 22:48:47 +0000] [4] [INFO] Shutting down: Master
+2017-02-21T22:48:47.824584+00:00 heroku[web.1]: Process exited with status 0
+2017-02-21T22:48:50.554366+00:00 heroku[web.1]: Starting process with command `gunicorn app:app --log-file -`
+2017-02-21T22:48:53.380712+00:00 app[web.1]: [2017-02-21 22:48:53 +0000] [4] [INFO] Starting gunicorn 19.6.0
+2017-02-21T22:48:53.381370+00:00 app[web.1]: [2017-02-21 22:48:53 +0000] [4] [INFO] Listening at: http://0.0.0.0:16578 (4)
+2017-02-21T22:48:53.381513+00:00 app[web.1]: [2017-02-21 22:48:53 +0000] [4] [INFO] Using worker: sync
+2017-02-21T22:48:53.387410+00:00 app[web.1]: [2017-02-21 22:48:53 +0000] [9] [INFO] Booting worker with pid: 9
+2017-02-21T22:48:53.427631+00:00 app[web.1]: [2017-02-21 22:48:53 +0000] [10] [INFO] Booting worker with pid: 10
+2017-02-21T22:48:54.161432+00:00 heroku[web.1]: State changed from starting to up
+2017-02-21T23:22:14.547889+00:00 heroku[web.1]: Idling
+2017-02-21T23:22:14.547889+00:00 heroku[web.1]: State changed from up to down
+2017-02-21T23:22:14.970042+00:00 app[web.1]: [2017-02-21 23:22:14 +0000] [9] [INFO] Worker exiting (pid: 9)
+2017-02-21T23:22:14.970147+00:00 app[web.1]: [2017-02-21 23:22:14 +0000] [10] [INFO] Worker exiting (pid: 10)
+2017-02-21T23:22:14.970255+00:00 app[web.1]: [2017-02-21 23:22:14 +0000] [4] [INFO] Handling signal: term
+2017-02-21T23:22:14.972975+00:00 app[web.1]: [2017-02-21 23:22:14 +0000] [4] [INFO] Shutting down: Master
+2017-02-21T23:22:14.964518+00:00 heroku[web.1]: Stopping all processes with SIGTERM
+2017-02-21T23:22:15.109612+00:00 heroku[web.1]: Process exited with status 0
+2017-02-21T23:25:40.222623+00:00 heroku[web.1]: Unidling
+2017-02-21T23:25:40.222910+00:00 heroku[web.1]: State changed from down to starting
+2017-02-21T23:25:43.631277+00:00 heroku[web.1]: Starting process with command `gunicorn app:app --log-file -`
+2017-02-21T23:25:46.796735+00:00 app[web.1]: [2017-02-21 23:25:46 +0000] [4] [INFO] Starting gunicorn 19.6.0
+2017-02-21T23:25:46.797567+00:00 app[web.1]: [2017-02-21 23:25:46 +0000] [4] [INFO] Listening at: http://0.0.0.0:52946 (4)
+2017-02-21T23:25:46.797766+00:00 app[web.1]: [2017-02-21 23:25:46 +0000] [4] [INFO] Using worker: sync
+2017-02-21T23:25:46.804417+00:00 app[web.1]: [2017-02-21 23:25:46 +0000] [9] [INFO] Booting worker with pid: 9
+2017-02-21T23:25:46.811314+00:00 app[web.1]: [2017-02-21 23:25:46 +0000] [10] [INFO] Booting worker with pid: 10
+2017-02-21T23:25:47.392005+00:00 heroku[web.1]: State changed from starting to up
+2017-02-21T23:25:48.311911+00:00 heroku[router]: at=info method=GET path="/" host=tripmeal.herokuapp.com request_id=baa8c4c2-cc51-4cf1-9d6b-6f86da97c0c4 fwd="176.79.184.221" dyno=web.1 connect=1ms service=40ms status=200 bytes=2241
+2017-02-21T23:25:50.265780+00:00 heroku[router]: at=info method=GET path="/favicon.ico" host=tripmeal.herokuapp.com request_id=138d3fb6-a614-4f30-94b5-52562d7b6980 fwd="176.79.184.221" dyno=web.1 connect=1ms service=22ms status=404 bytes=386
+2017-02-21T23:30:55.910216+00:00 heroku[router]: at=info method=GET path="/" host=tripmeal.herokuapp.com request_id=a28c20c4-52c9-48a3-86c7-be00bac7867e fwd="212.10.89.115" dyno=web.1 connect=1ms service=23ms status=200 bytes=2241
+2017-02-21T23:31:52.268949+00:00 heroku[router]: at=info method=GET path="/recipes/" host=tripmeal.herokuapp.com request_id=2afdc9d8-e7f6-4149-88b3-b1d771f25b40 fwd="176.79.184.221" dyno=web.1 connect=1ms service=64ms status=200 bytes=2171
+2017-02-21T23:32:00.150513+00:00 heroku[router]: at=info method=GET path="/recipe?rid=42" host=tripmeal.herokuapp.com request_id=2df7245f-4635-495a-b277-0e89bdb6bb13 fwd="176.79.184.221" dyno=web.1 connect=2ms service=38ms status=200 bytes=2813
+2017-02-21T23:33:16.731916+00:00 heroku[router]: at=info method=GET path="/recipes/" host=tripmeal.herokuapp.com request_id=6a1160da-843f-4d0d-8221-c7746310d412 fwd="176.79.184.221" dyno=web.1 connect=1ms service=37ms status=200 bytes=2171
+2017-02-21T23:33:19.263331+00:00 heroku[router]: at=info method=GET path="/recipe?rid=2" host=tripmeal.herokuapp.com request_id=47767db0-8076-4c96-89a9-3961b51bb2a4 fwd="176.79.184.221" dyno=web.1 connect=1ms service=62ms status=200 bytes=2364
+2017-02-21T23:33:39.150088+00:00 heroku[router]: at=info method=GET path="/menu/" host=tripmeal.herokuapp.com request_id=8b87860f-edc9-4e36-b059-e1522b968765 fwd="176.79.184.221" dyno=web.1 connect=1ms service=206ms status=200 bytes=2342
+2017-02-21T23:33:43.144964+00:00 heroku[router]: at=info method=GET path="/recipes/" host=tripmeal.herokuapp.com request_id=91da135b-ff9c-434c-941e-97893d07a9a2 fwd="176.79.184.221" dyno=web.1 connect=1ms service=30ms status=200 bytes=2171
+2017-02-21T23:33:45.646909+00:00 heroku[router]: at=info method=GET path="/recipe?rid=12" host=tripmeal.herokuapp.com request_id=7c5a5df4-7013-4807-986e-c70c831dfb20 fwd="176.79.184.221" dyno=web.1 connect=0ms service=29ms status=200 bytes=3119
+2017-02-22T00:06:19.607851+00:00 heroku[router]: at=info method=GET path="/favourites/" host=tripmeal.herokuapp.com request_id=c8d93704-dc14-4980-92c9-9c3550462017 fwd="176.79.40.126" dyno=web.1 connect=0ms service=197ms status=200 bytes=2544
+2017-02-22T00:06:27.320298+00:00 heroku[router]: at=info method=GET path="/recipes/" host=tripmeal.herokuapp.com request_id=b0a76fc4-c5e7-4bed-ad9d-bacf0aea5eec fwd="176.79.40.126" dyno=web.1 connect=0ms service=89ms status=200 bytes=2296
+2017-02-22T00:06:33.863190+00:00 heroku[router]: at=info method=GET path="/newrecipe/" host=tripmeal.herokuapp.com request_id=42887fd4-5382-4baf-bd88-8f446b86266e fwd="176.79.40.126" dyno=web.1 connect=0ms service=42ms status=200 bytes=15276
+2017-02-22T00:11:03.376708+00:00 heroku[router]: at=info method=POST path="/addrecipe/" host=tripmeal.herokuapp.com request_id=6a765b3c-b64c-4067-8dd3-88340879ad2d fwd="176.79.40.126" dyno=web.1 connect=0ms service=104ms status=302 bytes=718
+2017-02-22T00:11:03.625751+00:00 heroku[router]: at=info method=GET path="/newrecipe/" host=tripmeal.herokuapp.com request_id=aba8feba-0a61-4ed5-bd8b-4bef8f66dae0 fwd="176.79.40.126" dyno=web.1 connect=6ms service=16ms status=200 bytes=15693
+2017-02-22T00:11:06.293370+00:00 heroku[router]: at=info method=GET path="/recipes/" host=tripmeal.herokuapp.com request_id=77aa222e-9f13-491a-8507-1731993e8d52 fwd="176.79.40.126" dyno=web.1 connect=1ms service=37ms status=200 bytes=2376
+2017-02-22T00:11:08.283736+00:00 heroku[router]: at=info method=GET path="/recipe?rid=52" host=tripmeal.herokuapp.com request_id=917eed68-0164-43f8-aca6-77a275c15538 fwd="176.79.40.126" dyno=web.1 connect=1ms service=96ms status=200 bytes=2933
+2017-02-22T00:11:11.742716+00:00 heroku[router]: at=info method=GET path="/recipe?rid=52&fav=true" host=tripmeal.herokuapp.com request_id=3c8c7a3c-210d-4e01-9d68-951c5badcdb7 fwd="176.79.40.126" dyno=web.1 connect=1ms service=71ms status=200 bytes=2933
+2017-02-22T00:11:14.573344+00:00 heroku[router]: at=info method=GET path="/menu/" host=tripmeal.herokuapp.com request_id=943fbbd9-cdd6-4013-bfe4-f56167d6554f fwd="176.79.40.126" dyno=web.1 connect=1ms service=250ms status=200 bytes=2485
