@@ -277,8 +277,8 @@
   <div class="col-lg-offset-1 col-lg-6">
     <h3>Title</h3>
     <input type="text" name="title" style="width:90%" value="{{request.form.title}}" required>
-    <h3>Recipe<small> (add 1., 2., etc. if you want the recipe as a list)</small></h3>
-    <textarea name="recipe" rows="8" style="width:90%" value="{{request.form.recipe}}" required></textarea>
+    <h3>Recipe</h3>
+    <textarea id='editor' name="recipe" rows="8" style="width:90%" value="{{request.form.recipe}}" required></textarea>
   </div>
 
   <div class="form-group">
