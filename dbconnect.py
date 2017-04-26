@@ -34,6 +34,5 @@ def connection():
                            user=DATABASES['default']['USER'],
                            passwd=DATABASES['default']['PASSWORD'],
                            db=DATABASES['default']['NAME']
-                           )
     c = conn.cursor()
     return c, conn
