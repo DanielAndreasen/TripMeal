@@ -33,6 +33,6 @@ def connection():
     conn = MySQLdb.connect(host=DATABASES['default']['HOST'],
                            user=DATABASES['default']['USER'],
                            passwd=DATABASES['default']['PASSWORD'],
-                           db=DATABASES['default']['NAME']
+                           db=DATABASES['default']['NAME'])
     c = conn.cursor()
     return c, conn
