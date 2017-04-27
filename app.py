@@ -2,7 +2,7 @@ from flask import Flask, render_template, flash, jsonify, request, url_for, \
                   redirect, session, g
 from dbconnect import connection
 from MySQLdb import escape_string
-from wtforms import Form, TextField, PasswordField, BooleanField, validators
+from wtforms import Form, TextField, PasswordField, BooleanField, validators, TextAreaField, StringField, SelectField
 from passlib.hash import sha256_crypt
 from functools import wraps
 import random
@@ -16,6 +16,13 @@ class RegistrationForm(Form):
                                           validators.EqualTo('confirm',
                                                              message='Passwords must match')])
     confirm = PasswordField('Repeat password')
+
+
+class RecipeForm(Form):
+    title = StringField('Title', [validators.Length(min=1, max=200)])
+    country = SelectField('Country')
+    ingredients = TextAreaField('Ingredients', [validators.Length(min=5)])
+    recipe = TextAreaField('Recipe', [validators.Length(min=30)])
 
 
 def login_required(f):
@@ -360,11 +367,18 @@ def user_page():
     try:
         user = session['username']
         c, conn = connection()
-        _ = c.execute('SELECT rid, title FROM recipes WHERE user="%s";' % user)
+        _ = c.execute('SELECT rid, location, title FROM recipes WHERE user="%s";' % user)
         recipes = c.fetchall()
         c.close()
         conn.close()
         gc.collect()
+
+        recipes = [
+            {
+                'rid': recipe[0],
+                'country': recipe[1],
+                'title': recipe[2]
+             } for recipe in recipes]
 
         rank = get_ranking()
         if user not in rank.keys():
@@ -375,6 +389,66 @@ def user_page():
         return render_template('user.html', user=user, nr=number_recipes, tr=total_recipes, recipes=recipes)
     except Exception as e:
         return render_template('favourites.html', favourites=False)
+
+
+@app.route('/edit_recipe/<string:rid>', methods=['GET', 'POST'])
+@login_required
+def edit_recipe(rid):
+    # Get the recipe
+    # c.execute('INSERT INTO recipes (title, location, ingredients, recipe, user) VALUES ("%s", "%s", "%s", "%s", "%s");' %
+    c, conn = connection()
+    _ = c.execute('SELECT * FROM recipes WHERE rid="%s"' % rid)
+    recipe = c.fetchone()
+    c.close()
+    conn.close()
+    gc.collect()
+
+    # Fill the form
+    form = RecipeForm(request.form)
+    form.title.data = recipe[1]
+    form.country.data = recipe[2]
+    form.ingredients.data = '\n'.join(recipe[3].split(','))
+    form.recipe.data = recipe[4]
+
+    if request.method == 'POST':
+        title = escape_string(request.form['title'])
+        country = escape_string(request.form['country'])
+        ingredients = escape_string(','.join(request.form['ingredients'].split('\r\n')).strip(','))
+        recipe = escape_string(request.form['recipe'])
+
+        # Update the DB
+        c, conn = connection()
+        c.execute('UPDATE recipes SET title="%s", location="%s", ingredients="%s", recipe="%s" WHERE rid=%s' % (title, country, ingredients, recipe, rid))
+        conn.commit()
+
+        # Close connection
+        c.close()
+        conn.close()
+        gc.collect()
+
+        flash('Recipe updated')
+
+        return redirect(url_for('user_page'))
+
+    return render_template('edit_recipe.html', form=form)
+
+
+@app.route('/delete_recipe/<string:rid>', methods=['GET', 'POST'])
+@login_required
+def delete_recipe(rid):
+    username = session['username']
+    if request.method == 'POST':
+        c, conn = connection()
+        _ = c.execute('DELETE FROM recipes WHERE rid="%s" AND user="%s"' % (rid, username))
+        conn.commit()
+        c.close()
+        conn.close()
+        gc.collect()
+        flash('Recipe successfully deleted')
+        return redirect(url_for('user_page'))
+    else:
+        flash('Recipe not deleted')
+        return redirect(url_for('user_page'))
 
 
 if __name__ == '__main__':

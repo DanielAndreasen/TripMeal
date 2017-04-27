@@ -1,0 +1,36 @@
+{% extends "header.html" %}
+
+{% block body %}
+{% from "_recipeformhelpers.html" import render_field %}
+
+<script>
+function SelectElement(valueToSelect)
+{
+  document.getElementById('countries').value = 'DK';
+  document.write(42);
+}
+</script>
+
+  <form method="POST" action="">
+    <div class="col-lg-4">
+      <h3>Location</h3>
+      {% include "_countries.html" %}
+
+      <h3>Ingredients</h3>
+      {{ render_field(form.ingredients, class_="form-control", rows="8") }}
+    </div>
+
+    <div class="col-lg-offset-1 col-lg-6">
+      <h3>Title</h3>
+      {{ render_field(form.title, class_="form-control") }}
+      <h3>Recipe</h3>
+      {{ render_field(form.recipe, class_="form-control", id="editor") }}
+    </div>
+
+    <div class="form-group">
+      <div class="col-lg-offset-2 col-lg-1">
+        <input class="btn btn-primary" type="submit" Value="Edit recipe">
+      </div>
+    </div>
+  </form>
+{% endblock %}
