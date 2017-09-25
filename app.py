@@ -7,6 +7,7 @@ from passlib.hash import sha256_crypt
 from functools import wraps
 import random
 import gc
+import os
 
 
 class RegistrationForm(Form):
@@ -100,7 +101,7 @@ def convert2HTML(text):
 
 # Setup Flask
 app = Flask(__name__)
-app.config['SECRET_KEY'] = 'nuiv32orh8f34uifvnewivuh3924j3gp09'
+app.config['SECRET_KEY'] = os.environ['TRIPMEAL_KEY']
 
 
 @app.route('/')
@@ -114,7 +115,7 @@ def login_page():
         error = None
         c, conn = connection()
         if request.method == 'POST':
-            username = escape_string(request.form['username'])
+            username = escape_string(request.form['username']).decode()
             data = c.execute('SELECT * FROM users WHERE username = ("%s");' % username)
             data = c.fetchone()
             if sha256_crypt.verify(request.form['password'], data[2]) and (data[1] == username):
@@ -177,7 +178,8 @@ def register_page():
 @login_required
 def newrecipe():
     if request.method == 'POST':
-        print request.form
+        pass
+        # print request.form
     return render_template('newrecipe.html')
 
 
@@ -367,7 +369,10 @@ def user_page():
     try:
         user = session['username']
         c, conn = connection()
-        _ = c.execute('SELECT rid, location, title FROM recipes WHERE user="%s";' % user)
+        if user == 'Daniel':
+            _ = c.execute('SELECT rid, location, title FROM recipes;')
+        else:
+            _ = c.execute('SELECT rid, location, title FROM recipes WHERE user="%s";' % user)
         recipes = c.fetchall()
         c.close()
         conn.close()
@@ -439,7 +444,10 @@ def delete_recipe(rid):
     username = session['username']
     if request.method == 'POST':
         c, conn = connection()
-        _ = c.execute('DELETE FROM recipes WHERE rid="%s" AND user="%s"' % (rid, username))
+        if username == 'Daniel':
+            _ = c.execute('DELETE FROM recipes WHERE rid="%s"' % (rid))
+        else:
+            _ = c.execute('DELETE FROM recipes WHERE rid="%s" AND user="%s"' % (rid, username))
         conn.commit()
         c.close()
         conn.close()
@@ -452,4 +460,5 @@ def delete_recipe(rid):
 
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5000, debug=True)
+    port = int(os.environ.get('PORT', 5000))
+    app.run(host='0.0.0.0', port=port, debug=True)

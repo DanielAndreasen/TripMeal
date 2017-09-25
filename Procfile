@@ -1,2 +1,2 @@
-web: gunicorn app:app --log-file -
+web: gunicorn -c config.py app:app
 

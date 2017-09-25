@@ -1,5 +1,8 @@
 import MySQLdb
-import urlparse
+try:
+    import urlparse
+except ModuleNotFoundError:
+    from urllib import parse as urlparse
 import os
 
 urlparse.uses_netloc.append('mysql')
@@ -26,13 +29,14 @@ try:
         if url.scheme == 'mysql':
             DATABASES['default']['ENGINE'] = 'django.db.backends.mysql'
 except Exception:
-    print 'Unexpected error:', sys.exc_info()
+    print('Unexpected error:', sys.exc_info())
 
 
 def connection():
     conn = MySQLdb.connect(host=DATABASES['default']['HOST'],
                            user=DATABASES['default']['USER'],
                            passwd=DATABASES['default']['PASSWORD'],
-                           db=DATABASES['default']['NAME'])
+                           db=DATABASES['default']['NAME']
+                           )
     c = conn.cursor()
     return c, conn
